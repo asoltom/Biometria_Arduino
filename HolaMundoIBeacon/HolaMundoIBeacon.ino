@@ -45,6 +45,8 @@ namespace Globales {
 }; // namespace
 
 // --------------------------------------------------------------
+// --> inicializarPlaquita()
+// Descripción: Servirá para inicializar la Placa
 // --------------------------------------------------------------
 void inicializarPlaquita () {
 
@@ -58,29 +60,21 @@ void inicializarPlaquita () {
 void setup() {
 
   Globales::elPuerto.esperarDisponible();
-
-  // 
-  // 
+   
   // 
   inicializarPlaquita();
 
   // Suspend Loop() to save power
   // suspendLoop();
-
-  // 
-  // 
+ 
   // 
   Globales::elPublicador.encenderEmisora();
 
   // Globales::elPublicador.laEmisora.pruebaEmision();
   
   // 
-  // 
-  // 
   Globales::elMedidor.iniciarMedidor();
 
-  // 
-  // 
   // 
   esperar( 1000 );
 
@@ -110,8 +104,6 @@ namespace Loop {
   uint8_t cont = 0;
 };
 
-// ..............................................................
-// ..............................................................
 void loop () {
 
   using namespace Loop;
@@ -126,9 +118,9 @@ void loop () {
 
   lucecitas();
 
-  // 
+  // --------------
   // mido y publico
-  // 
+  // --------------
   int valorCO2 = elMedidor.medirCO2();
   
   elPublicador.publicarCO2( valorCO2,
@@ -136,9 +128,9 @@ void loop () {
 							1000 // intervalo de emisión
 							);
   
-  // 
+  // --------------
   // mido y publico
-  // 
+  // --------------
   int valorTemperatura = elMedidor.medirTemperatura();
   
   elPublicador.publicarTemperatura( valorTemperatura, 
@@ -146,13 +138,13 @@ void loop () {
 									1000 // intervalo de emisión
 									);
 
-  // 
+  // -----------------------------------------------------------
   // prueba para emitir un iBeacon y poner
   // en la carga (21 bytes = uuid 16 major 2 minor 2 txPower 1 )
   // lo que queramos (sin seguir dicho formato)
   // 
   // Al terminar la prueba hay que hacer Publicador::laEmisora privado
-  // 
+  // -----------------------------------------------------------
   char datos[21] = {
 	'H', 'o', 'l', 'a',
 	'H', 'o', 'l', 'a',
@@ -177,7 +169,3 @@ void loop () {
   elPuerto.escribir( "\n" );
   
 } // loop ()
-// --------------------------------------------------------------
-// --------------------------------------------------------------
-// --------------------------------------------------------------
-// --------------------------------------------------------------
