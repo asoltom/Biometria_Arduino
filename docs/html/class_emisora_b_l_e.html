@@ -1,0 +1,729 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Biometria_Arduino: Referencia de la clase EmisoraBLE</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Biometria_Arduino<span id="projectnumber">&#160;1</span>
+   </div>
+   <div id="projectbrief">Documentación del proyecto Biometria_Arduino</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Tipos públicos</a> &#124;
+<a href="#pub-methods">Métodos públicos</a> &#124;
+<a href="#pri-attribs">Atributos privados</a>  </div>
+  <div class="headertitle"><div class="title">Referencia de la clase EmisoraBLE</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_emisora_b_l_e_8h_source.html">EmisoraBLE.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Tipos públicos</h2></td></tr>
+<tr class="memitem:a2b5da98f1f7994b60de9349adc46538d" id="r_a2b5da98f1f7994b60de9349adc46538d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_emisora_b_l_e.html#a2b5da98f1f7994b60de9349adc46538d">CallbackConexionEstablecida</a> = void(uint16_t connHandle)</td></tr>
+<tr class="separator:a2b5da98f1f7994b60de9349adc46538d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2677eaf92c789ee6ff2bf3dfd34fbeeb" id="r_a2677eaf92c789ee6ff2bf3dfd34fbeeb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_emisora_b_l_e.html#a2677eaf92c789ee6ff2bf3dfd34fbeeb">CallbackConexionTerminada</a> = void(uint16_t connHandle, uint8_t reason)</td></tr>
+<tr class="separator:a2677eaf92c789ee6ff2bf3dfd34fbeeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:a0a00423c1458d93ff7865c0d508459ad" id="r_a0a00423c1458d93ff7865c0d508459ad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_emisora_b_l_e.html#a0a00423c1458d93ff7865c0d508459ad">EmisoraBLE</a> (const char *nombreEmisora_, const uint16_t fabricanteID_, const int8_t txPower_)</td></tr>
+<tr class="separator:a0a00423c1458d93ff7865c0d508459ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbefd34b570bc58380da42e77527c3ce" id="r_adbefd34b570bc58380da42e77527c3ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_emisora_b_l_e.html#adbefd34b570bc58380da42e77527c3ce">encenderEmisora</a> ()</td></tr>
+<tr class="separator:adbefd34b570bc58380da42e77527c3ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a881902d925f327ec142009de7e10355e" id="r_a881902d925f327ec142009de7e10355e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_emisora_b_l_e.html#a881902d925f327ec142009de7e10355e">encenderEmisora</a> (<a class="el" href="class_emisora_b_l_e.html#a2b5da98f1f7994b60de9349adc46538d">CallbackConexionEstablecida</a> cbce, <a class="el" href="class_emisora_b_l_e.html#a2677eaf92c789ee6ff2bf3dfd34fbeeb">CallbackConexionTerminada</a> cbct)</td></tr>
+<tr class="separator:a881902d925f327ec142009de7e10355e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac46ff05d8af2388d14c8006daa8be97d" id="r_ac46ff05d8af2388d14c8006daa8be97d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_emisora_b_l_e.html#ac46ff05d8af2388d14c8006daa8be97d">detenerAnuncio</a> ()</td></tr>
+<tr class="separator:ac46ff05d8af2388d14c8006daa8be97d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefb25aa471115728b45a7c096965ff76" id="r_aefb25aa471115728b45a7c096965ff76"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_emisora_b_l_e.html#aefb25aa471115728b45a7c096965ff76">estaAnunciando</a> ()</td></tr>
+<tr class="separator:aefb25aa471115728b45a7c096965ff76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac79d557cecd4476d72bb519beb5f29c2" id="r_ac79d557cecd4476d72bb519beb5f29c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_emisora_b_l_e.html#ac79d557cecd4476d72bb519beb5f29c2">emitirAnuncioIBeacon</a> (uint8_t *beaconUUID, int16_t major, int16_t minor, uint8_t rssi)</td></tr>
+<tr class="separator:ac79d557cecd4476d72bb519beb5f29c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a728aa8ab6975905cb67b918e4d12ca" id="r_a7a728aa8ab6975905cb67b918e4d12ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_emisora_b_l_e.html#a7a728aa8ab6975905cb67b918e4d12ca">emitirAnuncioIBeaconLibre</a> (const char *carga, const uint8_t tamanyoCarga)</td></tr>
+<tr class="separator:a7a728aa8ab6975905cb67b918e4d12ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8536957b6a7ec181313367caaa317ed8" id="r_a8536957b6a7ec181313367caaa317ed8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_emisora_b_l_e.html#a8536957b6a7ec181313367caaa317ed8">anyadirServicio</a> (<a class="el" href="class_servicio_en_emisora.html">ServicioEnEmisora</a> &amp;servicio)</td></tr>
+<tr class="separator:a8536957b6a7ec181313367caaa317ed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5474e5ad5fe4c71aa0018775785b62fb" id="r_a5474e5ad5fe4c71aa0018775785b62fb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_emisora_b_l_e.html#a5474e5ad5fe4c71aa0018775785b62fb">anyadirServicioConSusCaracteristicas</a> (<a class="el" href="class_servicio_en_emisora.html">ServicioEnEmisora</a> &amp;servicio)</td></tr>
+<tr class="separator:a5474e5ad5fe4c71aa0018775785b62fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66e49a1f4418fe20804b16c7a35d1fb7" id="r_a66e49a1f4418fe20804b16c7a35d1fb7"><td class="memTemplParams" colspan="2">template&lt;typename ... T&gt; </td></tr>
+<tr class="memitem:a66e49a1f4418fe20804b16c7a35d1fb7"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_emisora_b_l_e.html#a66e49a1f4418fe20804b16c7a35d1fb7">anyadirServicioConSusCaracteristicas</a> (<a class="el" href="class_servicio_en_emisora.html">ServicioEnEmisora</a> &amp;servicio, <a class="el" href="class_servicio_en_emisora_1_1_caracteristica.html">ServicioEnEmisora::Caracteristica</a> &amp;caracteristica, T &amp;... restoCaracteristicas)</td></tr>
+<tr class="separator:a66e49a1f4418fe20804b16c7a35d1fb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16895e037c0ef42462b9b324407fe448" id="r_a16895e037c0ef42462b9b324407fe448"><td class="memTemplParams" colspan="2">template&lt;typename ... T&gt; </td></tr>
+<tr class="memitem:a16895e037c0ef42462b9b324407fe448"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_emisora_b_l_e.html#a16895e037c0ef42462b9b324407fe448">anyadirServicioConSusCaracteristicasYActivar</a> (<a class="el" href="class_servicio_en_emisora.html">ServicioEnEmisora</a> &amp;servicio, T &amp;... restoCaracteristicas)</td></tr>
+<tr class="separator:a16895e037c0ef42462b9b324407fe448"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa31978c852802e08f6706f5108bd742c" id="r_aa31978c852802e08f6706f5108bd742c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_emisora_b_l_e.html#aa31978c852802e08f6706f5108bd742c">instalarCallbackConexionEstablecida</a> (<a class="el" href="class_emisora_b_l_e.html#a2b5da98f1f7994b60de9349adc46538d">CallbackConexionEstablecida</a> cb)</td></tr>
+<tr class="separator:aa31978c852802e08f6706f5108bd742c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ca1aeede06f377c8026f3416a78221d" id="r_a4ca1aeede06f377c8026f3416a78221d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_emisora_b_l_e.html#a4ca1aeede06f377c8026f3416a78221d">instalarCallbackConexionTerminada</a> (<a class="el" href="class_emisora_b_l_e.html#a2677eaf92c789ee6ff2bf3dfd34fbeeb">CallbackConexionTerminada</a> cb)</td></tr>
+<tr class="separator:a4ca1aeede06f377c8026f3416a78221d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45f68bc05b6b5de37a6ea800d2cce9ef" id="r_a45f68bc05b6b5de37a6ea800d2cce9ef"><td class="memItemLeft" align="right" valign="top">BLEConnection *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_emisora_b_l_e.html#a45f68bc05b6b5de37a6ea800d2cce9ef">getConexion</a> (uint16_t connHandle)</td></tr>
+<tr class="separator:a45f68bc05b6b5de37a6ea800d2cce9ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Atributos privados</h2></td></tr>
+<tr class="memitem:af05d4dedb0ffaf9ea8ae546595b8ec48" id="r_af05d4dedb0ffaf9ea8ae546595b8ec48"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_emisora_b_l_e.html#af05d4dedb0ffaf9ea8ae546595b8ec48">nombreEmisora</a></td></tr>
+<tr class="separator:af05d4dedb0ffaf9ea8ae546595b8ec48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a541386cd9ac170f430b498c0e8292cdf" id="r_a541386cd9ac170f430b498c0e8292cdf"><td class="memItemLeft" align="right" valign="top">const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_emisora_b_l_e.html#a541386cd9ac170f430b498c0e8292cdf">fabricanteID</a></td></tr>
+<tr class="separator:a541386cd9ac170f430b498c0e8292cdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc32aebe825cb8b63cfe43e8bfbaa2d5" id="r_afc32aebe825cb8b63cfe43e8bfbaa2d5"><td class="memItemLeft" align="right" valign="top">const int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_emisora_b_l_e.html#afc32aebe825cb8b63cfe43e8bfbaa2d5">txPower</a></td></tr>
+<tr class="separator:afc32aebe825cb8b63cfe43e8bfbaa2d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock">
+<p class="definition">Definición en la línea <a class="el" href="_emisora_b_l_e_8h_source.html#l00014">14</a> del archivo <a class="el" href="_emisora_b_l_e_8h_source.html">EmisoraBLE.h</a>.</p>
+</div><h2 class="groupheader">Documentación de los «Typedef» miembros de la clase</h2>
+<a id="a2b5da98f1f7994b60de9349adc46538d" name="a2b5da98f1f7994b60de9349adc46538d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b5da98f1f7994b60de9349adc46538d">&#9670;&#160;</a></span>CallbackConexionEstablecida</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="class_emisora_b_l_e.html#a2b5da98f1f7994b60de9349adc46538d">CallbackConexionEstablecida</a> =  void ( uint16_t connHandle )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_emisora_b_l_e_8h_source.html#l00025">25</a> del archivo <a class="el" href="_emisora_b_l_e_8h_source.html">EmisoraBLE.h</a>.</p>
+
+</div>
+</div>
+<a id="a2677eaf92c789ee6ff2bf3dfd34fbeeb" name="a2677eaf92c789ee6ff2bf3dfd34fbeeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2677eaf92c789ee6ff2bf3dfd34fbeeb">&#9670;&#160;</a></span>CallbackConexionTerminada</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="class_emisora_b_l_e.html#a2677eaf92c789ee6ff2bf3dfd34fbeeb">CallbackConexionTerminada</a> =  void ( uint16_t connHandle, uint8_t reason)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_emisora_b_l_e_8h_source.html#l00026">26</a> del archivo <a class="el" href="_emisora_b_l_e_8h_source.html">EmisoraBLE.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de constructores y destructores</h2>
+<a id="a0a00423c1458d93ff7865c0d508459ad" name="a0a00423c1458d93ff7865c0d508459ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a00423c1458d93ff7865c0d508459ad">&#9670;&#160;</a></span>EmisoraBLE()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_emisora_b_l_e.html">EmisoraBLE</a> </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>nombreEmisora_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint16_t&#160;</td>
+          <td class="paramname"><em>fabricanteID_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int8_t&#160;</td>
+          <td class="paramname"><em>txPower_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_emisora_b_l_e_8h_source.html#l00030">30</a> del archivo <a class="el" href="_emisora_b_l_e_8h_source.html">EmisoraBLE.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de funciones miembro</h2>
+<a id="a8536957b6a7ec181313367caaa317ed8" name="a8536957b6a7ec181313367caaa317ed8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8536957b6a7ec181313367caaa317ed8">&#9670;&#160;</a></span>anyadirServicio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool anyadirServicio </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_servicio_en_emisora.html">ServicioEnEmisora</a> &amp;&#160;</td>
+          <td class="paramname"><em>servicio</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_emisora_b_l_e_8h_source.html#l00231">231</a> del archivo <a class="el" href="_emisora_b_l_e_8h_source.html">EmisoraBLE.h</a>.</p>
+
+</div>
+</div>
+<a id="a5474e5ad5fe4c71aa0018775785b62fb" name="a5474e5ad5fe4c71aa0018775785b62fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5474e5ad5fe4c71aa0018775785b62fb">&#9670;&#160;</a></span>anyadirServicioConSusCaracteristicas() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool anyadirServicioConSusCaracteristicas </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_servicio_en_emisora.html">ServicioEnEmisora</a> &amp;&#160;</td>
+          <td class="paramname"><em>servicio</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_emisora_b_l_e_8h_source.html#l00252">252</a> del archivo <a class="el" href="_emisora_b_l_e_8h_source.html">EmisoraBLE.h</a>.</p>
+
+</div>
+</div>
+<a id="a66e49a1f4418fe20804b16c7a35d1fb7" name="a66e49a1f4418fe20804b16c7a35d1fb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66e49a1f4418fe20804b16c7a35d1fb7">&#9670;&#160;</a></span>anyadirServicioConSusCaracteristicas() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ... T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool anyadirServicioConSusCaracteristicas </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_servicio_en_emisora.html">ServicioEnEmisora</a> &amp;&#160;</td>
+          <td class="paramname"><em>servicio</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_servicio_en_emisora_1_1_caracteristica.html">ServicioEnEmisora::Caracteristica</a> &amp;&#160;</td>
+          <td class="paramname"><em>caracteristica</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T &amp;...&#160;</td>
+          <td class="paramname"><em>restoCaracteristicas</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_emisora_b_l_e_8h_source.html#l00258">258</a> del archivo <a class="el" href="_emisora_b_l_e_8h_source.html">EmisoraBLE.h</a>.</p>
+
+</div>
+</div>
+<a id="a16895e037c0ef42462b9b324407fe448" name="a16895e037c0ef42462b9b324407fe448"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16895e037c0ef42462b9b324407fe448">&#9670;&#160;</a></span>anyadirServicioConSusCaracteristicasYActivar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ... T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool anyadirServicioConSusCaracteristicasYActivar </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_servicio_en_emisora.html">ServicioEnEmisora</a> &amp;&#160;</td>
+          <td class="paramname"><em>servicio</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T &amp;...&#160;</td>
+          <td class="paramname"><em>restoCaracteristicas</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_emisora_b_l_e_8h_source.html#l00270">270</a> del archivo <a class="el" href="_emisora_b_l_e_8h_source.html">EmisoraBLE.h</a>.</p>
+
+</div>
+</div>
+<a id="ac46ff05d8af2388d14c8006daa8be97d" name="ac46ff05d8af2388d14c8006daa8be97d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac46ff05d8af2388d14c8006daa8be97d">&#9670;&#160;</a></span>detenerAnuncio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void detenerAnuncio </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_emisora_b_l_e_8h_source.html#l00076">76</a> del archivo <a class="el" href="_emisora_b_l_e_8h_source.html">EmisoraBLE.h</a>.</p>
+
+</div>
+</div>
+<a id="ac79d557cecd4476d72bb519beb5f29c2" name="ac79d557cecd4476d72bb519beb5f29c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac79d557cecd4476d72bb519beb5f29c2">&#9670;&#160;</a></span>emitirAnuncioIBeacon()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void emitirAnuncioIBeacon </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>beaconUUID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int16_t&#160;</td>
+          <td class="paramname"><em>major</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int16_t&#160;</td>
+          <td class="paramname"><em>minor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>rssi</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_emisora_b_l_e_8h_source.html#l00096">96</a> del archivo <a class="el" href="_emisora_b_l_e_8h_source.html">EmisoraBLE.h</a>.</p>
+
+</div>
+</div>
+<a id="a7a728aa8ab6975905cb67b918e4d12ca" name="a7a728aa8ab6975905cb67b918e4d12ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a728aa8ab6975905cb67b918e4d12ca">&#9670;&#160;</a></span>emitirAnuncioIBeaconLibre()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void emitirAnuncioIBeaconLibre </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>carga</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>tamanyoCarga</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_emisora_b_l_e_8h_source.html#l00172">172</a> del archivo <a class="el" href="_emisora_b_l_e_8h_source.html">EmisoraBLE.h</a>.</p>
+
+</div>
+</div>
+<a id="adbefd34b570bc58380da42e77527c3ce" name="adbefd34b570bc58380da42e77527c3ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbefd34b570bc58380da42e77527c3ce">&#9670;&#160;</a></span>encenderEmisora() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void encenderEmisora </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_emisora_b_l_e_8h_source.html#l00050">50</a> del archivo <a class="el" href="_emisora_b_l_e_8h_source.html">EmisoraBLE.h</a>.</p>
+
+</div>
+</div>
+<a id="a881902d925f327ec142009de7e10355e" name="a881902d925f327ec142009de7e10355e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a881902d925f327ec142009de7e10355e">&#9670;&#160;</a></span>encenderEmisora() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void encenderEmisora </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_emisora_b_l_e.html#a2b5da98f1f7994b60de9349adc46538d">CallbackConexionEstablecida</a>&#160;</td>
+          <td class="paramname"><em>cbce</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_emisora_b_l_e.html#a2677eaf92c789ee6ff2bf3dfd34fbeeb">CallbackConexionTerminada</a>&#160;</td>
+          <td class="paramname"><em>cbct</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_emisora_b_l_e_8h_source.html#l00062">62</a> del archivo <a class="el" href="_emisora_b_l_e_8h_source.html">EmisoraBLE.h</a>.</p>
+
+</div>
+</div>
+<a id="aefb25aa471115728b45a7c096965ff76" name="aefb25aa471115728b45a7c096965ff76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefb25aa471115728b45a7c096965ff76">&#9670;&#160;</a></span>estaAnunciando()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool estaAnunciando </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_emisora_b_l_e_8h_source.html#l00088">88</a> del archivo <a class="el" href="_emisora_b_l_e_8h_source.html">EmisoraBLE.h</a>.</p>
+
+</div>
+</div>
+<a id="a45f68bc05b6b5de37a6ea800d2cce9ef" name="a45f68bc05b6b5de37a6ea800d2cce9ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45f68bc05b6b5de37a6ea800d2cce9ef">&#9670;&#160;</a></span>getConexion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BLEConnection * getConexion </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>connHandle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_emisora_b_l_e_8h_source.html#l00300">300</a> del archivo <a class="el" href="_emisora_b_l_e_8h_source.html">EmisoraBLE.h</a>.</p>
+
+</div>
+</div>
+<a id="aa31978c852802e08f6706f5108bd742c" name="aa31978c852802e08f6706f5108bd742c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa31978c852802e08f6706f5108bd742c">&#9670;&#160;</a></span>instalarCallbackConexionEstablecida()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void instalarCallbackConexionEstablecida </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_emisora_b_l_e.html#a2b5da98f1f7994b60de9349adc46538d">CallbackConexionEstablecida</a>&#160;</td>
+          <td class="paramname"><em>cb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_emisora_b_l_e_8h_source.html#l00286">286</a> del archivo <a class="el" href="_emisora_b_l_e_8h_source.html">EmisoraBLE.h</a>.</p>
+
+</div>
+</div>
+<a id="a4ca1aeede06f377c8026f3416a78221d" name="a4ca1aeede06f377c8026f3416a78221d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ca1aeede06f377c8026f3416a78221d">&#9670;&#160;</a></span>instalarCallbackConexionTerminada()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void instalarCallbackConexionTerminada </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_emisora_b_l_e.html#a2677eaf92c789ee6ff2bf3dfd34fbeeb">CallbackConexionTerminada</a>&#160;</td>
+          <td class="paramname"><em>cb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_emisora_b_l_e_8h_source.html#l00294">294</a> del archivo <a class="el" href="_emisora_b_l_e_8h_source.html">EmisoraBLE.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de campos</h2>
+<a id="a541386cd9ac170f430b498c0e8292cdf" name="a541386cd9ac170f430b498c0e8292cdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a541386cd9ac170f430b498c0e8292cdf">&#9670;&#160;</a></span>fabricanteID</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint16_t fabricanteID</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_emisora_b_l_e_8h_source.html#l00018">18</a> del archivo <a class="el" href="_emisora_b_l_e_8h_source.html">EmisoraBLE.h</a>.</p>
+
+</div>
+</div>
+<a id="af05d4dedb0ffaf9ea8ae546595b8ec48" name="af05d4dedb0ffaf9ea8ae546595b8ec48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af05d4dedb0ffaf9ea8ae546595b8ec48">&#9670;&#160;</a></span>nombreEmisora</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* nombreEmisora</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_emisora_b_l_e_8h_source.html#l00017">17</a> del archivo <a class="el" href="_emisora_b_l_e_8h_source.html">EmisoraBLE.h</a>.</p>
+
+</div>
+</div>
+<a id="afc32aebe825cb8b63cfe43e8bfbaa2d5" name="afc32aebe825cb8b63cfe43e8bfbaa2d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc32aebe825cb8b63cfe43e8bfbaa2d5">&#9670;&#160;</a></span>txPower</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int8_t txPower</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_emisora_b_l_e_8h_source.html#l00019">19</a> del archivo <a class="el" href="_emisora_b_l_e_8h_source.html">EmisoraBLE.h</a>.</p>
+
+</div>
+</div>
+<hr/>La documentación de esta clase está generada del siguiente archivo:<ul>
+<li>C:/Users/clavi/Desktop/UPV Gandia/UPV Gandia 2023-2024/Proyecto Biometria/Sprint 0 - Individual/Arduino/src/Sprint0_Arduino/<a class="el" href="_emisora_b_l_e_8h_source.html">EmisoraBLE.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

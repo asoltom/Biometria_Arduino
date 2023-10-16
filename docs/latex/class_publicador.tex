@@ -1,0 +1,184 @@
+\doxysection{Referencia de la clase Publicador}
+\hypertarget{class_publicador}{}\label{class_publicador}\index{Publicador@{Publicador}}
+
+
+{\ttfamily \#include $<$Publicador.\+h$>$}
+
+\doxysubsubsection*{Tipos públicos}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_publicador_a650e19dd057ca6514e4101a907ac6ede}{Mediciones\+ID}} \{ \mbox{\hyperlink{class_publicador_a650e19dd057ca6514e4101a907ac6edea45104f72acc44c3d9c1581c87653bff8}{CO2}} = 11
+, \mbox{\hyperlink{class_publicador_a650e19dd057ca6514e4101a907ac6edeae717ed95ca7b816fc49ccf1fbc9e3590}{TEMPERATURA}} = 12
+, \mbox{\hyperlink{class_publicador_a650e19dd057ca6514e4101a907ac6edea294820a94645c179aaa1409317a8894e}{RUIDO}} = 13
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_publicador_a32e3c99592a970a172d4c06267efc154}{Publicador}} ()
+\item 
+void \mbox{\hyperlink{class_publicador_adbefd34b570bc58380da42e77527c3ce}{encender\+Emisora}} ()
+\item 
+void \mbox{\hyperlink{class_publicador_a1772b6a9bca7089ee6f4cc2ad99363c7}{publicar\+Mis\+Valores}} (int16\+\_\+t valor\+CO2, int16\+\_\+t valor\+Temperatura, long tiempo\+Espera)
+\item 
+void \mbox{\hyperlink{class_publicador_a5ded8a58c0231d0e244b0b4df9af4cf4}{publicar\+CO2}} (int16\+\_\+t valor\+CO2, uint8\+\_\+t contador, long tiempo\+Espera)
+\item 
+void \mbox{\hyperlink{class_publicador_a92c9ff5257d1a40d349e01992099b6cf}{publicar\+Temperatura}} (int16\+\_\+t valor\+Temperatura, uint8\+\_\+t contador, long tiempo\+Espera)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Campos de datos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_emisora_b_l_e}{Emisora\+BLE}} \mbox{\hyperlink{class_publicador_a586e80cc99bc19e0f5adb85d373bdb30}{la\+Emisora}}
+\item 
+const int \mbox{\hyperlink{class_publicador_ae61d7137737206197b2e496b08f74da5}{RSSI}} = -\/55
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_publicador_a31c93a9885614cd73cd3c209f3ae36db}{beacon\+UUID}} \mbox{[}16\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+
+
+Definición en la línea \mbox{\hyperlink{_publicador_8h_source_l00013}{13}} del archivo \mbox{\hyperlink{_publicador_8h_source}{Publicador.\+h}}.
+
+
+
+\doxysubsection{Documentación de las enumeraciones miembro de la clase}
+\Hypertarget{class_publicador_a650e19dd057ca6514e4101a907ac6ede}\label{class_publicador_a650e19dd057ca6514e4101a907ac6ede} 
+\index{Publicador@{Publicador}!MedicionesID@{MedicionesID}}
+\index{MedicionesID@{MedicionesID}!Publicador@{Publicador}}
+\doxysubsubsection{\texorpdfstring{MedicionesID}{MedicionesID}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_publicador_a650e19dd057ca6514e4101a907ac6ede}{Mediciones\+ID}}}
+
+\begin{DoxyEnumFields}{Valores de enumeraciones}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CO2@{CO2}!Publicador@{Publicador}}\index{Publicador@{Publicador}!CO2@{CO2}}}\Hypertarget{class_publicador_a650e19dd057ca6514e4101a907ac6edea45104f72acc44c3d9c1581c87653bff8}\label{class_publicador_a650e19dd057ca6514e4101a907ac6edea45104f72acc44c3d9c1581c87653bff8} 
+CO2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEMPERATURA@{TEMPERATURA}!Publicador@{Publicador}}\index{Publicador@{Publicador}!TEMPERATURA@{TEMPERATURA}}}\Hypertarget{class_publicador_a650e19dd057ca6514e4101a907ac6edeae717ed95ca7b816fc49ccf1fbc9e3590}\label{class_publicador_a650e19dd057ca6514e4101a907ac6edeae717ed95ca7b816fc49ccf1fbc9e3590} 
+TEMPERATURA&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RUIDO@{RUIDO}!Publicador@{Publicador}}\index{Publicador@{Publicador}!RUIDO@{RUIDO}}}\Hypertarget{class_publicador_a650e19dd057ca6514e4101a907ac6edea294820a94645c179aaa1409317a8894e}\label{class_publicador_a650e19dd057ca6514e4101a907ac6edea294820a94645c179aaa1409317a8894e} 
+RUIDO&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definición en la línea \mbox{\hyperlink{_publicador_8h_source_l00041}{41}} del archivo \mbox{\hyperlink{_publicador_8h_source}{Publicador.\+h}}.
+
+
+
+\doxysubsection{Documentación de constructores y destructores}
+\Hypertarget{class_publicador_a32e3c99592a970a172d4c06267efc154}\label{class_publicador_a32e3c99592a970a172d4c06267efc154} 
+\index{Publicador@{Publicador}!Publicador@{Publicador}}
+\index{Publicador@{Publicador}!Publicador@{Publicador}}
+\doxysubsubsection{\texorpdfstring{Publicador()}{Publicador()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_publicador}{Publicador}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_publicador_8h_source_l00049}{49}} del archivo \mbox{\hyperlink{_publicador_8h_source}{Publicador.\+h}}.
+
+
+
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{class_publicador_adbefd34b570bc58380da42e77527c3ce}\label{class_publicador_adbefd34b570bc58380da42e77527c3ce} 
+\index{Publicador@{Publicador}!encenderEmisora@{encenderEmisora}}
+\index{encenderEmisora@{encenderEmisora}!Publicador@{Publicador}}
+\doxysubsubsection{\texorpdfstring{encenderEmisora()}{encenderEmisora()}}
+{\footnotesize\ttfamily void encender\+Emisora (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_publicador_8h_source_l00058}{58}} del archivo \mbox{\hyperlink{_publicador_8h_source}{Publicador.\+h}}.
+
+\Hypertarget{class_publicador_a5ded8a58c0231d0e244b0b4df9af4cf4}\label{class_publicador_a5ded8a58c0231d0e244b0b4df9af4cf4} 
+\index{Publicador@{Publicador}!publicarCO2@{publicarCO2}}
+\index{publicarCO2@{publicarCO2}!Publicador@{Publicador}}
+\doxysubsubsection{\texorpdfstring{publicarCO2()}{publicarCO2()}}
+{\footnotesize\ttfamily void publicar\+CO2 (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{valor\+CO2,  }\item[{uint8\+\_\+t}]{contador,  }\item[{long}]{tiempo\+Espera }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_publicador_8h_source_l00093}{93}} del archivo \mbox{\hyperlink{_publicador_8h_source}{Publicador.\+h}}.
+
+\Hypertarget{class_publicador_a1772b6a9bca7089ee6f4cc2ad99363c7}\label{class_publicador_a1772b6a9bca7089ee6f4cc2ad99363c7} 
+\index{Publicador@{Publicador}!publicarMisValores@{publicarMisValores}}
+\index{publicarMisValores@{publicarMisValores}!Publicador@{Publicador}}
+\doxysubsubsection{\texorpdfstring{publicarMisValores()}{publicarMisValores()}}
+{\footnotesize\ttfamily void publicar\+Mis\+Valores (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{valor\+CO2,  }\item[{int16\+\_\+t}]{valor\+Temperatura,  }\item[{long}]{tiempo\+Espera }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_publicador_8h_source_l00067}{67}} del archivo \mbox{\hyperlink{_publicador_8h_source}{Publicador.\+h}}.
+
+\Hypertarget{class_publicador_a92c9ff5257d1a40d349e01992099b6cf}\label{class_publicador_a92c9ff5257d1a40d349e01992099b6cf} 
+\index{Publicador@{Publicador}!publicarTemperatura@{publicarTemperatura}}
+\index{publicarTemperatura@{publicarTemperatura}!Publicador@{Publicador}}
+\doxysubsubsection{\texorpdfstring{publicarTemperatura()}{publicarTemperatura()}}
+{\footnotesize\ttfamily void publicar\+Temperatura (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{valor\+Temperatura,  }\item[{uint8\+\_\+t}]{contador,  }\item[{long}]{tiempo\+Espera }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_publicador_8h_source_l00127}{127}} del archivo \mbox{\hyperlink{_publicador_8h_source}{Publicador.\+h}}.
+
+
+
+\doxysubsection{Documentación de campos}
+\Hypertarget{class_publicador_a31c93a9885614cd73cd3c209f3ae36db}\label{class_publicador_a31c93a9885614cd73cd3c209f3ae36db} 
+\index{Publicador@{Publicador}!beaconUUID@{beaconUUID}}
+\index{beaconUUID@{beaconUUID}!Publicador@{Publicador}}
+\doxysubsubsection{\texorpdfstring{beaconUUID}{beaconUUID}}
+{\footnotesize\ttfamily uint8\+\_\+t beacon\+UUID\mbox{[}16\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{charliteral}{'E'},\ \textcolor{charliteral}{'P'},\ \textcolor{charliteral}{'S'},\ \textcolor{charliteral}{'G'},\ \textcolor{charliteral}{'-\/'},\ \textcolor{charliteral}{'G'},\ \textcolor{charliteral}{'T'},\ \textcolor{charliteral}{'I'},}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{charliteral}{'-\/'},\ \textcolor{charliteral}{'P'},\ \textcolor{charliteral}{'R'},\ \textcolor{charliteral}{'O'},\ \textcolor{charliteral}{'Y'},\ \textcolor{charliteral}{'-\/'},\ \textcolor{charliteral}{'3'},\ \textcolor{charliteral}{'A'}}
+\DoxyCodeLine{\ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Definición en la línea \mbox{\hyperlink{_publicador_8h_source_l00019}{19}} del archivo \mbox{\hyperlink{_publicador_8h_source}{Publicador.\+h}}.
+
+\Hypertarget{class_publicador_a586e80cc99bc19e0f5adb85d373bdb30}\label{class_publicador_a586e80cc99bc19e0f5adb85d373bdb30} 
+\index{Publicador@{Publicador}!laEmisora@{laEmisora}}
+\index{laEmisora@{laEmisora}!Publicador@{Publicador}}
+\doxysubsubsection{\texorpdfstring{laEmisora}{laEmisora}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_emisora_b_l_e}{Emisora\+BLE}} la\+Emisora}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{stringliteral}{"{}GTI-\/PROY-\/3A-\/ARNAU"{}},\ }
+\DoxyCodeLine{\ \ \ \ \ \ 0x004c,\ }
+\DoxyCodeLine{\ \ \ \ \ \ 4\ }
+\DoxyCodeLine{\ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Definición en la línea \mbox{\hyperlink{_publicador_8h_source_l00027}{27}} del archivo \mbox{\hyperlink{_publicador_8h_source}{Publicador.\+h}}.
+
+\Hypertarget{class_publicador_ae61d7137737206197b2e496b08f74da5}\label{class_publicador_ae61d7137737206197b2e496b08f74da5} 
+\index{Publicador@{Publicador}!RSSI@{RSSI}}
+\index{RSSI@{RSSI}!Publicador@{Publicador}}
+\doxysubsubsection{\texorpdfstring{RSSI}{RSSI}}
+{\footnotesize\ttfamily const int RSSI = -\/55}
+
+
+
+Definición en la línea \mbox{\hyperlink{_publicador_8h_source_l00033}{33}} del archivo \mbox{\hyperlink{_publicador_8h_source}{Publicador.\+h}}.
+
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/clavi/\+Desktop/\+UPV Gandia/\+UPV Gandia 2023-\/2024/\+Proyecto Biometria/\+Sprint 0 -\/ Individual/\+Arduino/src/\+Sprint0\+\_\+\+Arduino/\mbox{\hyperlink{_publicador_8h}{Publicador.\+h}}\end{DoxyCompactItemize}

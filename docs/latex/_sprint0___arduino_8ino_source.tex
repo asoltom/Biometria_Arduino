@@ -1,0 +1,169 @@
+\doxysection{Sprint0\+\_\+\+Arduino.\+ino}
+\hypertarget{_sprint0___arduino_8ino_source}{}\label{_sprint0___arduino_8ino_source}\index{C:/Users/clavi/Desktop/UPV Gandia/UPV Gandia 2023-\/2024/Proyecto Biometria/Sprint 0 -\/ Individual/Arduino/src/Sprint0\_Arduino/Sprint0\_Arduino.ino@{C:/Users/clavi/Desktop/UPV Gandia/UPV Gandia 2023-\/2024/Proyecto Biometria/Sprint 0 -\/ Individual/Arduino/src/Sprint0\_Arduino/Sprint0\_Arduino.ino}}
+\mbox{\hyperlink{_sprint0___arduino_8ino}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00001}00001\ \textcolor{comment}{//\ -\/*-\/c++-\/*-\/}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00003}00003\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00004}00004\ \textcolor{comment}{//\ Arnau\ Soler\ Tomás}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00005}00005\ \textcolor{comment}{//\ 2023-\/09-\/25}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00006}00006\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <bluefruit.h>}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00010}00010\ \textcolor{preprocessor}{\#undef\ min}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00011}00011\ \textcolor{preprocessor}{\#undef\ max}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00013}00013\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00014}00014\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00015}00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_l_e_d_8h}{LED.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00016}00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_puerto_serie_8h}{PuertoSerie.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00018}00018\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00019}00019\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00020}\mbox{\hyperlink{namespace_globales}{00020}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_globales}{Globales}}\ \{}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00022}\mbox{\hyperlink{namespace_globales_ab88cc72f169bd6bc75a158259e3c1cc2}{00022}}\ \mbox{\hyperlink{class_l_e_d}{LED}}\ \mbox{\hyperlink{namespace_globales_ab88cc72f169bd6bc75a158259e3c1cc2}{elLED}}\ (\ \textcolor{comment}{/*\ NUMERO\ DEL\ PIN\ LED\ =\ */}\ 7\ );}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00024}\mbox{\hyperlink{namespace_globales_a8479052d558297793d6f1c8b11cf45d4}{00024}}\ \mbox{\hyperlink{class_puerto_serie}{PuertoSerie}}\ \mbox{\hyperlink{namespace_globales_a8479052d558297793d6f1c8b11cf45d4}{elPuerto}}\ (\ \textcolor{comment}{/*\ velocidad\ =\ */}\ 115200\ );\ \textcolor{comment}{//\ 115200\ o\ 9600\ o\ ...}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00025}00025\ \};}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00027}00027\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00028}00028\ \textcolor{comment}{//\ Librerias}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00029}00029\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00030}00030\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_emisora_b_l_e_8h}{EmisoraBLE.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00031}00031\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_publicador_8h}{Publicador.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00032}00032\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_medidor_8h}{Medidor.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00033}00033\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00034}00034\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00036}00036\ \textcolor{comment}{//Al\ ver\ el\ namespace\ Globales\ duplicado\ en\ un\ inicio,\ pense\ en\ unificarlos,}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00037}00037\ \textcolor{comment}{//es\ decir,\ poner\ las\ variables\ Publicador\ elPublicador\ y\ Medidor\ elMedidor}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00038}00038\ \textcolor{comment}{//junto\ a\ las\ del\ otro.\ Pero\ daba\ error\ en\ la\ clase\ EmisoraBLE.h}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00039}00039\ \textcolor{comment}{//Al\ final,\ por\ razones\ de\ Arduino,\ se\ debe\ quedar\ así,\ "{}duplicado"{}.}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00041}00041\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_globales}{Globales}}\ \{}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00043}\mbox{\hyperlink{namespace_globales_a8882b8bfc78fd67d2a924dc46dda4516}{00043}}\ \ \ \mbox{\hyperlink{class_publicador}{Publicador}}\ \mbox{\hyperlink{namespace_globales_a8882b8bfc78fd67d2a924dc46dda4516}{elPublicador}};}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00045}\mbox{\hyperlink{namespace_globales_a4e3c516075842cef058cfe93a520986b}{00045}}\ \ \ \mbox{\hyperlink{class_medidor}{Medidor}}\ \mbox{\hyperlink{namespace_globales_a4e3c516075842cef058cfe93a520986b}{elMedidor}};}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00047}00047\ \};\ \textcolor{comment}{//\ namespace}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00049}00049\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00050}00050\ \textcolor{comment}{//\ setup()}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00051}00051\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00052}\mbox{\hyperlink{_sprint0___arduino_8ino_a4fc01d736fe50cf5b977f755b675f11d}{00052}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_sprint0___arduino_8ino_a4fc01d736fe50cf5b977f755b675f11d}{setup}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00054}00054\ \ \ \mbox{\hyperlink{namespace_globales_a8479052d558297793d6f1c8b11cf45d4}{Globales::elPuerto}}.\mbox{\hyperlink{class_puerto_serie_af1da6a50717134cbdf2d60afa387ea80}{esperarDisponible}}();}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00056}00056\ \ \ \mbox{\hyperlink{namespace_globales_a8882b8bfc78fd67d2a924dc46dda4516}{Globales::elPublicador}}.\mbox{\hyperlink{class_publicador_adbefd34b570bc58380da42e77527c3ce}{encenderEmisora}}();}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00058}00058\ \ \ \textcolor{comment}{//Globales::elMedidor.iniciarMedidor();}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00060}00060\ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00061}00061\ \ \ \mbox{\hyperlink{_l_e_d_8h_a2fb17dd710d89b92e59a349551733fa0}{esperar}}(\ 1000\ );}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00063}00063\ \ \ \mbox{\hyperlink{namespace_globales_a8479052d558297793d6f1c8b11cf45d4}{Globales::elPuerto}}.\mbox{\hyperlink{class_puerto_serie_ae06c3c158490e837bb9b582967ccd88b}{escribir}}(\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/\ setup():\ fin\ -\/-\/-\/-\/\ \(\backslash\)n\ "{}}\ );}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00065}00065\ \}\ \textcolor{comment}{//\ setup\ ()}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00067}00067\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00068}00068\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00069}\mbox{\hyperlink{_sprint0___arduino_8ino_a27ffed2fef5d69b87e240022e59c59ff}{00069}}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_sprint0___arduino_8ino_a27ffed2fef5d69b87e240022e59c59ff}{lucecitas}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00070}00070\ \ \ \textcolor{keyword}{using\ namespace\ }\mbox{\hyperlink{namespace_globales}{Globales}};}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00072}00072\ \ \ elLED.\mbox{\hyperlink{class_l_e_d_a4f69970a011f6dda3f7fa0284a3993ae}{brillar}}(\ 100\ );\ \textcolor{comment}{//\ 100\ encendido}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00073}00073\ \ \ \mbox{\hyperlink{_l_e_d_8h_a2fb17dd710d89b92e59a349551733fa0}{esperar}}\ (\ 400\ );\ \textcolor{comment}{//\ \ 100\ apagado}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00074}00074\ \ \ elLED.\mbox{\hyperlink{class_l_e_d_a4f69970a011f6dda3f7fa0284a3993ae}{brillar}}(\ 100\ );\ \textcolor{comment}{//\ 100\ encendido}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00075}00075\ \ \ \mbox{\hyperlink{_l_e_d_8h_a2fb17dd710d89b92e59a349551733fa0}{esperar}}\ (\ 400\ );\ \textcolor{comment}{//\ \ 100\ apagado}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00076}00076\ \ \ \mbox{\hyperlink{namespace_globales_ab88cc72f169bd6bc75a158259e3c1cc2}{Globales::elLED}}.\mbox{\hyperlink{class_l_e_d_a4f69970a011f6dda3f7fa0284a3993ae}{brillar}}(\ 100\ );\ \textcolor{comment}{//\ 100\ encendido}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00077}00077\ \ \ \mbox{\hyperlink{_l_e_d_8h_a2fb17dd710d89b92e59a349551733fa0}{esperar}}\ (\ 400\ );\ \textcolor{comment}{//\ \ 100\ apagado}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00078}00078\ \ \ \mbox{\hyperlink{namespace_globales_ab88cc72f169bd6bc75a158259e3c1cc2}{Globales::elLED}}.\mbox{\hyperlink{class_l_e_d_a4f69970a011f6dda3f7fa0284a3993ae}{brillar}}(\ 1000\ );\ \textcolor{comment}{//\ 1000\ encendido}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00079}00079\ \ \ \mbox{\hyperlink{_l_e_d_8h_a2fb17dd710d89b92e59a349551733fa0}{esperar}}\ (\ 1000\ );\ \textcolor{comment}{//\ \ 100\ apagado}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00080}00080\ \}\ \textcolor{comment}{//\ ()}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00082}00082\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00083}00083\ \textcolor{comment}{//\ loop\ ()}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00084}00084\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00085}\mbox{\hyperlink{namespace_loop}{00085}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_loop}{Loop}}\ \{}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00086}\mbox{\hyperlink{namespace_loop_a12a3d65bbb825387f9e1c93d18e08c64}{00086}}\ uint8\_t\ \mbox{\hyperlink{namespace_loop_a12a3d65bbb825387f9e1c93d18e08c64}{cont}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00087}00087\ \};}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00089}\mbox{\hyperlink{_sprint0___arduino_8ino_afe461d27b9c48d5921c00d521181f12f}{00089}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_sprint0___arduino_8ino_afe461d27b9c48d5921c00d521181f12f}{loop}}\ ()\ \{}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00091}00091\ \ \ \textcolor{keyword}{using\ namespace\ }\mbox{\hyperlink{namespace_loop}{Loop}};}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00092}00092\ \ \ \textcolor{keyword}{using\ namespace\ }\mbox{\hyperlink{namespace_globales}{Globales}};}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00094}00094\ \ \ cont++;}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00096}00096\ \ \ elPuerto.\mbox{\hyperlink{class_puerto_serie_ae06c3c158490e837bb9b582967ccd88b}{escribir}}(\ \textcolor{stringliteral}{"{}\(\backslash\)n-\/-\/-\/-\/\ loop():\ empieza\ "{}}\ );}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00097}00097\ \ \ elPuerto.\mbox{\hyperlink{class_puerto_serie_ae06c3c158490e837bb9b582967ccd88b}{escribir}}(\ cont\ );}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00098}00098\ \ \ elPuerto.\mbox{\hyperlink{class_puerto_serie_ae06c3c158490e837bb9b582967ccd88b}{escribir}}(\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}\ );}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00101}00101\ \ \ \mbox{\hyperlink{_sprint0___arduino_8ino_a27ffed2fef5d69b87e240022e59c59ff}{lucecitas}}();}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00102}00102\ \textcolor{comment}{/*\ -\/-\/-\/\ Pruebas\ para\ medir\ y\ publicar\ los\ valores\ de\ CO2\ y\ Temperatura\ por\ separado\ -\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00103}00103\ \textcolor{comment}{\ \ //\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00104}00104\ \textcolor{comment}{\ \ //\ mido\ y\ publico\ el\ valor\ de\ CO2}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00105}00105\ \textcolor{comment}{\ \ //\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00106}00106\ \textcolor{comment}{\ \ int\ valorCO2\ =\ elMedidor.medirCO2();}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00107}00107\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00108}00108\ \textcolor{comment}{\ \ elPublicador.publicarCO2(\ valorCO2,}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00109}00109\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cont,}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00110}00110\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 1000\ //\ intervalo\ de\ emisión}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00111}00111\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00112}00112\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00113}00113\ \textcolor{comment}{\ \ //\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00114}00114\ \textcolor{comment}{\ \ //\ mido\ y\ publico\ el\ valor\ de\ Temperatura}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00115}00115\ \textcolor{comment}{\ \ //\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00116}00116\ \textcolor{comment}{\ \ int\ valorTemperatura\ =\ elMedidor.medirTemperatura();}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00117}00117\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00118}00118\ \textcolor{comment}{\ \ elPublicador.publicarTemperatura(\ valorTemperatura,}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00119}00119\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cont,}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00120}00120\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 1000\ //\ intervalo\ de\ emisión}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00121}00121\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00122}00122\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00123}00123\ \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00124}00124\ }
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00125}00125\ \ \ \textcolor{keyword}{enum}\ MedicionesID\ \ \{}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00126}00126\ \ \ \ \ \ \ CO2\ =\ 1145,\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 1145\ ppm}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00127}00127\ \ \ \ \ \ \ TEMPERATURA\ =\ 31,\ \ \ \textcolor{comment}{//\ 31\ grados}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00128}00128\ \ \ \ \ \ \ TIEMPOESPERA\ =\ 2000\ \textcolor{comment}{//\ 2\ segundos}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00129}00129\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00130}00130\ \ \ }
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00131}00131\ \ \ elPublicador.\mbox{\hyperlink{class_publicador_a1772b6a9bca7089ee6f4cc2ad99363c7}{publicarMisValores}}(MedicionesID::CO2,MedicionesID::TEMPERATURA,MedicionesID::TIEMPOESPERA);}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00132}00132\ }
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00133}00133\ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00134}00134\ \ \ \textcolor{comment}{//\ prueba\ para\ emitir\ un\ iBeacon\ y\ poner}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00135}00135\ \ \ \textcolor{comment}{//\ en\ la\ carga\ (21\ bytes\ =\ uuid\ 16\ major\ 2\ minor\ 2\ txPower\ 1\ )}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00136}00136\ \ \ \textcolor{comment}{//\ lo\ que\ queramos\ (sin\ seguir\ dicho\ formato)}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00137}00137\ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00138}00138\ \ \ \textcolor{comment}{//\ Al\ terminar\ la\ prueba\ hay\ que\ hacer\ Publicador::laEmisora\ privado}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00139}00139\ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00140}00140\ \ \ \textcolor{keywordtype}{char}\ datos[21]\ =\ \{}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00141}00141\ \ \ \ \ \textcolor{charliteral}{'E'},\ \textcolor{charliteral}{'P'},\ \textcolor{charliteral}{'S'},\ \textcolor{charliteral}{'G'},\ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00142}00142\ \ \ \ \ \textcolor{charliteral}{'-\/'},\ \textcolor{charliteral}{'A'},\ \textcolor{charliteral}{'R'},\ \textcolor{charliteral}{'N'},\ \ \ \textcolor{comment}{//\ -\/\ UUID\ -\/}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00143}00143\ \ \ \ \ \textcolor{charliteral}{'A'},\ \textcolor{charliteral}{'U'},\ \textcolor{charliteral}{'-\/'},\ \textcolor{charliteral}{'3'},\ \ \ \textcolor{comment}{//\ -\/\ \ \ \ \ \ -\/}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00144}00144\ \ \ \ \ \textcolor{charliteral}{'A'},\ \textcolor{charliteral}{'\ '},\ \textcolor{charliteral}{'\ '},\ \textcolor{charliteral}{'\ '},\ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00145}00145\ \ \ \ \ \textcolor{charliteral}{'M'},\ \textcolor{charliteral}{'j'},\ \textcolor{charliteral}{'M'},\ \textcolor{charliteral}{'n'},\ \ \ \textcolor{comment}{//\ major,\ minor}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00146}00146\ \ \ \ \ \textcolor{charliteral}{'T'}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ txPower}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00147}00147\ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00148}00148\ }
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00149}00149\ \ \ \textcolor{comment}{//\ elPublicador.laEmisora.emitirAnuncioIBeaconLibre\ (\ \&datos[0],\ 21\ );}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00150}00150\ \ \ \textcolor{comment}{//\ elPublicador.laEmisora.emitirAnuncioIBeaconLibre\ (\ "{}MolaMolaMolaMolaMolaM"{},\ 21\ );}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00151}00151\ }
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00152}00152\ \ \ \mbox{\hyperlink{_l_e_d_8h_a2fb17dd710d89b92e59a349551733fa0}{esperar}}(\ 2000\ );}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00153}00153\ }
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00154}00154\ \ \ elPublicador.\mbox{\hyperlink{class_publicador_a586e80cc99bc19e0f5adb85d373bdb30}{laEmisora}}.\mbox{\hyperlink{class_emisora_b_l_e_ac46ff05d8af2388d14c8006daa8be97d}{detenerAnuncio}}();}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00155}00155\ }
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00156}00156\ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00157}00157\ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00158}00158\ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00159}00159\ \ \ elPuerto.\mbox{\hyperlink{class_puerto_serie_ae06c3c158490e837bb9b582967ccd88b}{escribir}}(\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/\ loop():\ acaba\ ****\ "{}}\ );}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00160}00160\ \ \ elPuerto.\mbox{\hyperlink{class_puerto_serie_ae06c3c158490e837bb9b582967ccd88b}{escribir}}(\ cont\ );}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00161}00161\ \ \ elPuerto.\mbox{\hyperlink{class_puerto_serie_ae06c3c158490e837bb9b582967ccd88b}{escribir}}(\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}\ );}
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00162}00162\ }
+\DoxyCodeLine{\Hypertarget{_sprint0___arduino_8ino_source_l00163}00163\ \}\ \textcolor{comment}{//\ loop\ ()}}
+
+\end{DoxyCode}

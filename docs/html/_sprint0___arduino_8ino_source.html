@@ -1,0 +1,291 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Biometria_Arduino: Archivo de código fuente C:/Users/clavi/Desktop/UPV Gandia/UPV Gandia 2023-2024/Proyecto Biometria/Sprint 0 - Individual/Arduino/src/Sprint0_Arduino/Sprint0_Arduino.ino</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Biometria_Arduino<span id="projectnumber">&#160;1</span>
+   </div>
+   <div id="projectbrief">Documentación del proyecto Biometria_Arduino</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_f7797ab125433a12147f8d60cc791c85.html">Sprint0_Arduino</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Sprint0_Arduino.ino</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_sprint0___arduino_8ino.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// -*-c++-*-</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// --------------------------------------------------------------</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// Arnau Soler Tomás</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// 2023-09-25</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">// --------------------------------------------------------------</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;bluefruit.h&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#undef min</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#undef max</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">// --------------------------------------------------------------</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// --------------------------------------------------------------</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="_l_e_d_8h.html">LED.h</a>&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="_puerto_serie_8h.html">PuertoSerie.h</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">// --------------------------------------------------------------</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">// --------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="}">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="namespace_globales.html">   20</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_globales.html">Globales</a> {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="namespace_globales.html#ab88cc72f169bd6bc75a158259e3c1cc2">   22</a></span><a class="code hl_class" href="class_l_e_d.html">LED</a> <a class="code hl_variable" href="namespace_globales.html#ab88cc72f169bd6bc75a158259e3c1cc2">elLED</a> ( <span class="comment">/* NUMERO DEL PIN LED = */</span> 7 );</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="namespace_globales.html#a8479052d558297793d6f1c8b11cf45d4">   24</a></span><a class="code hl_class" href="class_puerto_serie.html">PuertoSerie</a> <a class="code hl_variable" href="namespace_globales.html#a8479052d558297793d6f1c8b11cf45d4">elPuerto</a> ( <span class="comment">/* velocidad = */</span> 115200 ); <span class="comment">// 115200 o 9600 o ...</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>};</div>
+</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">// --------------------------------------------------------------</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">// Librerias</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">// --------------------------------------------------------------</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &quot;<a class="code" href="_emisora_b_l_e_8h.html">EmisoraBLE.h</a>&quot;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &quot;<a class="code" href="_publicador_8h.html">Publicador.h</a>&quot;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &quot;<a class="code" href="_medidor_8h.html">Medidor.h</a>&quot;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">// --------------------------------------------------------------</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">// --------------------------------------------------------------</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">//Al ver el namespace Globales duplicado en un inicio, pense en unificarlos,</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">//es decir, poner las variables Publicador elPublicador y Medidor elMedidor</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">//junto a las del otro. Pero daba error en la clase EmisoraBLE.h</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">//Al final, por razones de Arduino, se debe quedar así, &quot;duplicado&quot;.</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_globales.html">Globales</a> {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="namespace_globales.html#a8882b8bfc78fd67d2a924dc46dda4516">   43</a></span>  <a class="code hl_class" href="class_publicador.html">Publicador</a> <a class="code hl_variable" href="namespace_globales.html#a8882b8bfc78fd67d2a924dc46dda4516">elPublicador</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="namespace_globales.html#a4e3c516075842cef058cfe93a520986b">   45</a></span>  <a class="code hl_class" href="class_medidor.html">Medidor</a> <a class="code hl_variable" href="namespace_globales.html#a4e3c516075842cef058cfe93a520986b">elMedidor</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>}; <span class="comment">// namespace</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">// --------------------------------------------------------------</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">// setup()</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">// --------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00052" data-start="{" data-end="}">
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="_sprint0___arduino_8ino.html#a4fc01d736fe50cf5b977f755b675f11d">   52</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_sprint0___arduino_8ino.html#a4fc01d736fe50cf5b977f755b675f11d">setup</a>() {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  <a class="code hl_variable" href="namespace_globales.html#a8479052d558297793d6f1c8b11cf45d4">Globales::elPuerto</a>.<a class="code hl_function" href="class_puerto_serie.html#af1da6a50717134cbdf2d60afa387ea80">esperarDisponible</a>();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  <a class="code hl_variable" href="namespace_globales.html#a8882b8bfc78fd67d2a924dc46dda4516">Globales::elPublicador</a>.<a class="code hl_function" href="class_publicador.html#adbefd34b570bc58380da42e77527c3ce">encenderEmisora</a>();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <span class="comment">//Globales::elMedidor.iniciarMedidor();</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <span class="comment">//</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <a class="code hl_function" href="_l_e_d_8h.html#a2fb17dd710d89b92e59a349551733fa0">esperar</a>( 1000 );</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  <a class="code hl_variable" href="namespace_globales.html#a8479052d558297793d6f1c8b11cf45d4">Globales::elPuerto</a>.<a class="code hl_function" href="class_puerto_serie.html#ae06c3c158490e837bb9b582967ccd88b">escribir</a>( <span class="stringliteral">&quot;---- setup(): fin ---- \n &quot;</span> );</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>} <span class="comment">// setup ()</span></div>
+</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment">// --------------------------------------------------------------</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment">// --------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00069" data-start="{" data-end="}">
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="_sprint0___arduino_8ino.html#a27ffed2fef5d69b87e240022e59c59ff">   69</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="_sprint0___arduino_8ino.html#a27ffed2fef5d69b87e240022e59c59ff">lucecitas</a>() {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  <span class="keyword">using namespace </span><a class="code hl_namespace" href="namespace_globales.html">Globales</a>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  elLED.<a class="code hl_function" href="class_l_e_d.html#a4f69970a011f6dda3f7fa0284a3993ae">brillar</a>( 100 ); <span class="comment">// 100 encendido</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  <a class="code hl_function" href="_l_e_d_8h.html#a2fb17dd710d89b92e59a349551733fa0">esperar</a> ( 400 ); <span class="comment">//  100 apagado</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  elLED.<a class="code hl_function" href="class_l_e_d.html#a4f69970a011f6dda3f7fa0284a3993ae">brillar</a>( 100 ); <span class="comment">// 100 encendido</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  <a class="code hl_function" href="_l_e_d_8h.html#a2fb17dd710d89b92e59a349551733fa0">esperar</a> ( 400 ); <span class="comment">//  100 apagado</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  <a class="code hl_variable" href="namespace_globales.html#ab88cc72f169bd6bc75a158259e3c1cc2">Globales::elLED</a>.<a class="code hl_function" href="class_l_e_d.html#a4f69970a011f6dda3f7fa0284a3993ae">brillar</a>( 100 ); <span class="comment">// 100 encendido</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  <a class="code hl_function" href="_l_e_d_8h.html#a2fb17dd710d89b92e59a349551733fa0">esperar</a> ( 400 ); <span class="comment">//  100 apagado</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  <a class="code hl_variable" href="namespace_globales.html#ab88cc72f169bd6bc75a158259e3c1cc2">Globales::elLED</a>.<a class="code hl_function" href="class_l_e_d.html#a4f69970a011f6dda3f7fa0284a3993ae">brillar</a>( 1000 ); <span class="comment">// 1000 encendido</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  <a class="code hl_function" href="_l_e_d_8h.html#a2fb17dd710d89b92e59a349551733fa0">esperar</a> ( 1000 ); <span class="comment">//  100 apagado</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>} <span class="comment">// ()</span></div>
+</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment">// --------------------------------------------------------------</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="comment">// loop ()</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="comment">// --------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00085" data-start="{" data-end="}">
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="namespace_loop.html">   85</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_loop.html">Loop</a> {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="namespace_loop.html#a12a3d65bbb825387f9e1c93d18e08c64">   86</a></span>uint8_t <a class="code hl_variable" href="namespace_loop.html#a12a3d65bbb825387f9e1c93d18e08c64">cont</a> = 0;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>};</div>
+</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="foldopen" id="foldopen00089" data-start="{" data-end="}">
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="_sprint0___arduino_8ino.html#afe461d27b9c48d5921c00d521181f12f">   89</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_sprint0___arduino_8ino.html#afe461d27b9c48d5921c00d521181f12f">loop</a> () {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  <span class="keyword">using namespace </span><a class="code hl_namespace" href="namespace_loop.html">Loop</a>;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  <span class="keyword">using namespace </span><a class="code hl_namespace" href="namespace_globales.html">Globales</a>;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  cont++;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  elPuerto.<a class="code hl_function" href="class_puerto_serie.html#ae06c3c158490e837bb9b582967ccd88b">escribir</a>( <span class="stringliteral">&quot;\n---- loop(): empieza &quot;</span> );</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  elPuerto.<a class="code hl_function" href="class_puerto_serie.html#ae06c3c158490e837bb9b582967ccd88b">escribir</a>( cont );</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>  elPuerto.<a class="code hl_function" href="class_puerto_serie.html#ae06c3c158490e837bb9b582967ccd88b">escribir</a>( <span class="stringliteral">&quot;\n&quot;</span> );</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>  <a class="code hl_function" href="_sprint0___arduino_8ino.html#a27ffed2fef5d69b87e240022e59c59ff">lucecitas</a>();</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="comment">/* --- Pruebas para medir y publicar los valores de CO2 y Temperatura por separado ---</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="comment">  // --------------------------------------</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="comment">  // mido y publico el valor de CO2</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="comment">  // --------------------------------------</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="comment">  int valorCO2 = elMedidor.medirCO2();</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="comment"></span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="comment">  elPublicador.publicarCO2( valorCO2,</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="comment">                            cont,</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="comment">                            1000 // intervalo de emisión</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="comment">                          );</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="comment">  // --------------------------------------</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="comment">  // mido y publico el valor de Temperatura</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="comment">  // --------------------------------------</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="comment">  int valorTemperatura = elMedidor.medirTemperatura();</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="comment"></span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="comment">  elPublicador.publicarTemperatura( valorTemperatura,</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="comment">                                    cont,</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="comment">                                    1000 // intervalo de emisión</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="comment">                                  );</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="comment"></span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  <span class="keyword">enum</span> MedicionesID  {</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>      CO2 = 1145,           <span class="comment">// 1145 ppm</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>      TEMPERATURA = 31,   <span class="comment">// 31 grados</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>      TIEMPOESPERA = 2000 <span class="comment">// 2 segundos</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    };</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>  </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>  elPublicador.<a class="code hl_function" href="class_publicador.html#a1772b6a9bca7089ee6f4cc2ad99363c7">publicarMisValores</a>(MedicionesID::CO2,MedicionesID::TEMPERATURA,MedicionesID::TIEMPOESPERA);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>  <span class="comment">// -----------------------------------------------------------</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>  <span class="comment">// prueba para emitir un iBeacon y poner</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>  <span class="comment">// en la carga (21 bytes = uuid 16 major 2 minor 2 txPower 1 )</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>  <span class="comment">// lo que queramos (sin seguir dicho formato)</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>  <span class="comment">//</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>  <span class="comment">// Al terminar la prueba hay que hacer Publicador::laEmisora privado</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>  <span class="comment">// -----------------------------------------------------------</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>  <span class="keywordtype">char</span> datos[21] = {</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="charliteral">&#39;E&#39;</span>, <span class="charliteral">&#39;P&#39;</span>, <span class="charliteral">&#39;S&#39;</span>, <span class="charliteral">&#39;G&#39;</span>,   <span class="comment">// --------</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="charliteral">&#39;-&#39;</span>, <span class="charliteral">&#39;A&#39;</span>, <span class="charliteral">&#39;R&#39;</span>, <span class="charliteral">&#39;N&#39;</span>,   <span class="comment">// - UUID -</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    <span class="charliteral">&#39;A&#39;</span>, <span class="charliteral">&#39;U&#39;</span>, <span class="charliteral">&#39;-&#39;</span>, <span class="charliteral">&#39;3&#39;</span>,   <span class="comment">// -      -</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <span class="charliteral">&#39;A&#39;</span>, <span class="charliteral">&#39; &#39;</span>, <span class="charliteral">&#39; &#39;</span>, <span class="charliteral">&#39; &#39;</span>,   <span class="comment">// --------</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <span class="charliteral">&#39;M&#39;</span>, <span class="charliteral">&#39;j&#39;</span>, <span class="charliteral">&#39;M&#39;</span>, <span class="charliteral">&#39;n&#39;</span>,   <span class="comment">// major, minor</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="charliteral">&#39;T&#39;</span>                   <span class="comment">// txPower</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>  };</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>  <span class="comment">// elPublicador.laEmisora.emitirAnuncioIBeaconLibre ( &amp;datos[0], 21 );</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>  <span class="comment">// elPublicador.laEmisora.emitirAnuncioIBeaconLibre ( &quot;MolaMolaMolaMolaMolaM&quot;, 21 );</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>  <a class="code hl_function" href="_l_e_d_8h.html#a2fb17dd710d89b92e59a349551733fa0">esperar</a>( 2000 );</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>  elPublicador.<a class="code hl_variable" href="class_publicador.html#a586e80cc99bc19e0f5adb85d373bdb30">laEmisora</a>.<a class="code hl_function" href="class_emisora_b_l_e.html#ac46ff05d8af2388d14c8006daa8be97d">detenerAnuncio</a>();</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>  <span class="comment">//</span></div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>  <span class="comment">//</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>  <span class="comment">//</span></div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>  elPuerto.<a class="code hl_function" href="class_puerto_serie.html#ae06c3c158490e837bb9b582967ccd88b">escribir</a>( <span class="stringliteral">&quot;---- loop(): acaba **** &quot;</span> );</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>  elPuerto.<a class="code hl_function" href="class_puerto_serie.html#ae06c3c158490e837bb9b582967ccd88b">escribir</a>( cont );</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>  elPuerto.<a class="code hl_function" href="class_puerto_serie.html#ae06c3c158490e837bb9b582967ccd88b">escribir</a>( <span class="stringliteral">&quot;\n&quot;</span> );</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>} <span class="comment">// loop ()</span></div>
+</div>
+<div class="ttc" id="a_emisora_b_l_e_8h_html"><div class="ttname"><a href="_emisora_b_l_e_8h.html">EmisoraBLE.h</a></div></div>
+<div class="ttc" id="a_l_e_d_8h_html"><div class="ttname"><a href="_l_e_d_8h.html">LED.h</a></div></div>
+<div class="ttc" id="a_l_e_d_8h_html_a2fb17dd710d89b92e59a349551733fa0"><div class="ttname"><a href="_l_e_d_8h.html#a2fb17dd710d89b92e59a349551733fa0">esperar</a></div><div class="ttdeci">void esperar(long tiempo)</div><div class="ttdef"><b>Definition</b> <a href="_l_e_d_8h_source.html#l00014">LED.h:14</a></div></div>
+<div class="ttc" id="a_medidor_8h_html"><div class="ttname"><a href="_medidor_8h.html">Medidor.h</a></div></div>
+<div class="ttc" id="a_publicador_8h_html"><div class="ttname"><a href="_publicador_8h.html">Publicador.h</a></div></div>
+<div class="ttc" id="a_puerto_serie_8h_html"><div class="ttname"><a href="_puerto_serie_8h.html">PuertoSerie.h</a></div></div>
+<div class="ttc" id="a_sprint0___arduino_8ino_html_a27ffed2fef5d69b87e240022e59c59ff"><div class="ttname"><a href="_sprint0___arduino_8ino.html#a27ffed2fef5d69b87e240022e59c59ff">lucecitas</a></div><div class="ttdeci">void lucecitas()</div><div class="ttdef"><b>Definition</b> <a href="_sprint0___arduino_8ino_source.html#l00069">Sprint0_Arduino.ino:69</a></div></div>
+<div class="ttc" id="a_sprint0___arduino_8ino_html_a4fc01d736fe50cf5b977f755b675f11d"><div class="ttname"><a href="_sprint0___arduino_8ino.html#a4fc01d736fe50cf5b977f755b675f11d">setup</a></div><div class="ttdeci">void setup()</div><div class="ttdef"><b>Definition</b> <a href="_sprint0___arduino_8ino_source.html#l00052">Sprint0_Arduino.ino:52</a></div></div>
+<div class="ttc" id="a_sprint0___arduino_8ino_html_afe461d27b9c48d5921c00d521181f12f"><div class="ttname"><a href="_sprint0___arduino_8ino.html#afe461d27b9c48d5921c00d521181f12f">loop</a></div><div class="ttdeci">void loop()</div><div class="ttdef"><b>Definition</b> <a href="_sprint0___arduino_8ino_source.html#l00089">Sprint0_Arduino.ino:89</a></div></div>
+<div class="ttc" id="aclass_emisora_b_l_e_html_ac46ff05d8af2388d14c8006daa8be97d"><div class="ttname"><a href="class_emisora_b_l_e.html#ac46ff05d8af2388d14c8006daa8be97d">EmisoraBLE::detenerAnuncio</a></div><div class="ttdeci">void detenerAnuncio()</div><div class="ttdef"><b>Definition</b> <a href="_emisora_b_l_e_8h_source.html#l00076">EmisoraBLE.h:76</a></div></div>
+<div class="ttc" id="aclass_l_e_d_html"><div class="ttname"><a href="class_l_e_d.html">LED</a></div><div class="ttdef"><b>Definition</b> <a href="_l_e_d_8h_source.html#l00020">LED.h:20</a></div></div>
+<div class="ttc" id="aclass_l_e_d_html_a4f69970a011f6dda3f7fa0284a3993ae"><div class="ttname"><a href="class_l_e_d.html#a4f69970a011f6dda3f7fa0284a3993ae">LED::brillar</a></div><div class="ttdeci">void brillar(long tiempo)</div><div class="ttdef"><b>Definition</b> <a href="_l_e_d_8h_source.html#l00072">LED.h:72</a></div></div>
+<div class="ttc" id="aclass_medidor_html"><div class="ttname"><a href="class_medidor.html">Medidor</a></div><div class="ttdef"><b>Definition</b> <a href="_medidor_8h_source.html#l00013">Medidor.h:13</a></div></div>
+<div class="ttc" id="aclass_publicador_html"><div class="ttname"><a href="class_publicador.html">Publicador</a></div><div class="ttdef"><b>Definition</b> <a href="_publicador_8h_source.html#l00013">Publicador.h:13</a></div></div>
+<div class="ttc" id="aclass_publicador_html_a1772b6a9bca7089ee6f4cc2ad99363c7"><div class="ttname"><a href="class_publicador.html#a1772b6a9bca7089ee6f4cc2ad99363c7">Publicador::publicarMisValores</a></div><div class="ttdeci">void publicarMisValores(int16_t valorCO2, int16_t valorTemperatura, long tiempoEspera)</div><div class="ttdef"><b>Definition</b> <a href="_publicador_8h_source.html#l00067">Publicador.h:67</a></div></div>
+<div class="ttc" id="aclass_publicador_html_a586e80cc99bc19e0f5adb85d373bdb30"><div class="ttname"><a href="class_publicador.html#a586e80cc99bc19e0f5adb85d373bdb30">Publicador::laEmisora</a></div><div class="ttdeci">EmisoraBLE laEmisora</div><div class="ttdef"><b>Definition</b> <a href="_publicador_8h_source.html#l00027">Publicador.h:27</a></div></div>
+<div class="ttc" id="aclass_publicador_html_adbefd34b570bc58380da42e77527c3ce"><div class="ttname"><a href="class_publicador.html#adbefd34b570bc58380da42e77527c3ce">Publicador::encenderEmisora</a></div><div class="ttdeci">void encenderEmisora()</div><div class="ttdef"><b>Definition</b> <a href="_publicador_8h_source.html#l00058">Publicador.h:58</a></div></div>
+<div class="ttc" id="aclass_puerto_serie_html"><div class="ttname"><a href="class_puerto_serie.html">PuertoSerie</a></div><div class="ttdef"><b>Definition</b> <a href="_puerto_serie_8h_source.html#l00013">PuertoSerie.h:13</a></div></div>
+<div class="ttc" id="aclass_puerto_serie_html_ae06c3c158490e837bb9b582967ccd88b"><div class="ttname"><a href="class_puerto_serie.html#ae06c3c158490e837bb9b582967ccd88b">PuertoSerie::escribir</a></div><div class="ttdeci">void escribir(T mensaje)</div><div class="ttdef"><b>Definition</b> <a href="_puerto_serie_8h_source.html#l00043">PuertoSerie.h:43</a></div></div>
+<div class="ttc" id="aclass_puerto_serie_html_af1da6a50717134cbdf2d60afa387ea80"><div class="ttname"><a href="class_puerto_serie.html#af1da6a50717134cbdf2d60afa387ea80">PuertoSerie::esperarDisponible</a></div><div class="ttdeci">void esperarDisponible()</div><div class="ttdef"><b>Definition</b> <a href="_puerto_serie_8h_source.html#l00029">PuertoSerie.h:29</a></div></div>
+<div class="ttc" id="anamespace_globales_html"><div class="ttname"><a href="namespace_globales.html">Globales</a></div><div class="ttdef"><b>Definition</b> <a href="_sprint0___arduino_8ino_source.html#l00020">Sprint0_Arduino.ino:20</a></div></div>
+<div class="ttc" id="anamespace_globales_html_a4e3c516075842cef058cfe93a520986b"><div class="ttname"><a href="namespace_globales.html#a4e3c516075842cef058cfe93a520986b">Globales::elMedidor</a></div><div class="ttdeci">Medidor elMedidor</div><div class="ttdef"><b>Definition</b> <a href="_sprint0___arduino_8ino_source.html#l00045">Sprint0_Arduino.ino:45</a></div></div>
+<div class="ttc" id="anamespace_globales_html_a8479052d558297793d6f1c8b11cf45d4"><div class="ttname"><a href="namespace_globales.html#a8479052d558297793d6f1c8b11cf45d4">Globales::elPuerto</a></div><div class="ttdeci">PuertoSerie elPuerto(115200)</div></div>
+<div class="ttc" id="anamespace_globales_html_a8882b8bfc78fd67d2a924dc46dda4516"><div class="ttname"><a href="namespace_globales.html#a8882b8bfc78fd67d2a924dc46dda4516">Globales::elPublicador</a></div><div class="ttdeci">Publicador elPublicador</div><div class="ttdef"><b>Definition</b> <a href="_sprint0___arduino_8ino_source.html#l00043">Sprint0_Arduino.ino:43</a></div></div>
+<div class="ttc" id="anamespace_globales_html_ab88cc72f169bd6bc75a158259e3c1cc2"><div class="ttname"><a href="namespace_globales.html#ab88cc72f169bd6bc75a158259e3c1cc2">Globales::elLED</a></div><div class="ttdeci">LED elLED(7)</div></div>
+<div class="ttc" id="anamespace_loop_html"><div class="ttname"><a href="namespace_loop.html">Loop</a></div><div class="ttdef"><b>Definition</b> <a href="_sprint0___arduino_8ino_source.html#l00085">Sprint0_Arduino.ino:85</a></div></div>
+<div class="ttc" id="anamespace_loop_html_a12a3d65bbb825387f9e1c93d18e08c64"><div class="ttname"><a href="namespace_loop.html#a12a3d65bbb825387f9e1c93d18e08c64">Loop::cont</a></div><div class="ttdeci">uint8_t cont</div><div class="ttdef"><b>Definition</b> <a href="_sprint0___arduino_8ino_source.html#l00086">Sprint0_Arduino.ino:86</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

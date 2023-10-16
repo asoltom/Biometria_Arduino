@@ -1,0 +1,55 @@
+\doxysection{Puerto\+Serie.\+h}
+\hypertarget{_puerto_serie_8h_source}{}\label{_puerto_serie_8h_source}\index{C:/Users/clavi/Desktop/UPV Gandia/UPV Gandia 2023-\/2024/Proyecto Biometria/Sprint 0 -\/ Individual/Arduino/src/Sprint0\_Arduino/PuertoSerie.h@{C:/Users/clavi/Desktop/UPV Gandia/UPV Gandia 2023-\/2024/Proyecto Biometria/Sprint 0 -\/ Individual/Arduino/src/Sprint0\_Arduino/PuertoSerie.h}}
+\mbox{\hyperlink{_puerto_serie_8h}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00001}00001\ \textcolor{comment}{//\ -\/*-\/\ mode:\ c++\ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00003}00003\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00004}00004\ \textcolor{comment}{//\ Arnau\ Soler\ Tomás}}
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00005}00005\ \textcolor{comment}{//\ 2023-\/09-\/25}}
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00006}00006\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00008}00008\ \textcolor{preprocessor}{\#ifndef\ PUERTO\_SERIE\_H\_INCLUIDO}}
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00009}00009\ \textcolor{preprocessor}{\#define\ PUERTO\_SERIE\_H\_INCLUIDO}}
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00011}00011\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00012}00012\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00013}\mbox{\hyperlink{class_puerto_serie}{00013}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_puerto_serie}{PuertoSerie}}\ \ \{}
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00015}00015\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00016}00016\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00017}00017\ \textcolor{comment}{//\ Inicializador\ del\ Puerto\ Serie}}
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00018}00018\ \textcolor{comment}{//\ baudios:long\ -\/-\/>\ PuertoSerie()}}
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00019}00019\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00020}\mbox{\hyperlink{class_puerto_serie_a090fd52dd353d89051dfe48e788a164c}{00020}}\ \ \ \ \ \mbox{\hyperlink{class_puerto_serie_a090fd52dd353d89051dfe48e788a164c}{PuertoSerie}}\ (\textcolor{keywordtype}{long}\ baudios)\ \{}
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00021}00021\ \ \ \ \ \ \ Serial.begin(\ baudios\ );}
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00022}00022\ \ \ \ \ \ \ \textcolor{comment}{//\ mejor\ no\ poner\ esto\ aquí:\ while\ (\ !Serial\ )\ delay(10);}}
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00023}00023\ \ \ \ \ \}\ \textcolor{comment}{//\ ()}}
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00025}00025\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00026}00026\ \textcolor{comment}{//\ -\/-\/>\ esperarDisponible()}}
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00027}00027\ \textcolor{comment}{//\ Descripción:\ Método\ de\ la\ clase\ PuertoSerie\ que\ permite\ esperar\ (hacer\ un\ delay\ de)\ 10\ milisegundos}}
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00028}00028\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00029}\mbox{\hyperlink{class_puerto_serie_af1da6a50717134cbdf2d60afa387ea80}{00029}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_puerto_serie_af1da6a50717134cbdf2d60afa387ea80}{esperarDisponible}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00031}00031\ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\ !Serial\ )\ \{}
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00032}00032\ \ \ \ \ \ \ \ \ delay(10);}
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00033}00033\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00035}00035\ \ \ \ \ \}\ \textcolor{comment}{//\ ()}}
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00037}00037\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00038}00038\ \textcolor{comment}{//\ mensaje:T\ -\/-\/>\ escribir()}}
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00039}00039\ \textcolor{comment}{//\ Descripción:\ Un\ método\ que\ se\ resume\ en\ que\ hace\ un\ 'print'\ del\ mensaje\ que\ le\ demos.}}
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00040}00040\ \textcolor{comment}{//\ Es\ decir,\ escribir\ en\ pantalla\ el\ mensaje\ que\ le\ demos}}
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00041}00041\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00042}00042\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00043}\mbox{\hyperlink{class_puerto_serie_ae06c3c158490e837bb9b582967ccd88b}{00043}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_puerto_serie_ae06c3c158490e837bb9b582967ccd88b}{escribir}}\ (T\ mensaje)\ \{}
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00044}00044\ \ \ \ \ \ \ Serial.print(\ mensaje\ );}
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00045}00045\ \ \ \ \ \}\ \textcolor{comment}{//\ ()}}
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00047}00047\ \};\ \textcolor{comment}{//\ class\ PuertoSerie}}
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{_puerto_serie_8h_source_l00049}00049\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

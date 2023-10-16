@@ -99,7 +99,7 @@ void loop () {
 
 
   lucecitas();
-
+/* --- Pruebas para medir y publicar los valores de CO2 y Temperatura por separado ---
   // --------------------------------------
   // mido y publico el valor de CO2
   // --------------------------------------
@@ -109,7 +109,7 @@ void loop () {
                             cont,
                             1000 // intervalo de emisión
                           );
-
+/*
   // --------------------------------------
   // mido y publico el valor de Temperatura
   // --------------------------------------
@@ -120,6 +120,16 @@ void loop () {
                                     1000 // intervalo de emisión
                                   );
 
+*/
+
+  enum MedicionesID  {
+      CO2 = 1145,           // 1145 ppm
+      TEMPERATURA = 31,   // 31 grados
+      TIEMPOESPERA = 2000 // 2 segundos
+    };
+  
+  elPublicador.publicarMisValores(MedicionesID::CO2,MedicionesID::TEMPERATURA,MedicionesID::TIEMPOESPERA);
+
   // -----------------------------------------------------------
   // prueba para emitir un iBeacon y poner
   // en la carga (21 bytes = uuid 16 major 2 minor 2 txPower 1 )
@@ -128,15 +138,15 @@ void loop () {
   // Al terminar la prueba hay que hacer Publicador::laEmisora privado
   // -----------------------------------------------------------
   char datos[21] = {
-    'E', 's', 't', 'a',   // --------
-    ' ', 'e', 's', ' ',   // - UUID -
-    'm', 'i', ' ', 'U',   // -      -
-    'U', 'I', 'D', '.',   // --------
+    'E', 'P', 'S', 'G',   // --------
+    '-', 'A', 'R', 'N',   // - UUID -
+    'A', 'U', '-', '3',   // -      -
+    'A', ' ', ' ', ' ',   // --------
     'M', 'j', 'M', 'n',   // major, minor
     'T'                   // txPower
   };
 
-  elPublicador.laEmisora.emitirAnuncioIBeaconLibre ( &datos[0], 21 );
+  // elPublicador.laEmisora.emitirAnuncioIBeaconLibre ( &datos[0], 21 );
   // elPublicador.laEmisora.emitirAnuncioIBeaconLibre ( "MolaMolaMolaMolaMolaM", 21 );
 
   esperar( 2000 );

@@ -1,0 +1,269 @@
+\doxysection{Referencia de la clase Emisora\+BLE}
+\hypertarget{class_emisora_b_l_e}{}\label{class_emisora_b_l_e}\index{EmisoraBLE@{EmisoraBLE}}
+
+
+{\ttfamily \#include $<$Emisora\+BLE.\+h$>$}
+
+\doxysubsubsection*{Tipos públicos}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{class_emisora_b_l_e_a2b5da98f1f7994b60de9349adc46538d}{Callback\+Conexion\+Establecida}} = void(uint16\+\_\+t conn\+Handle)
+\item 
+using \mbox{\hyperlink{class_emisora_b_l_e_a2677eaf92c789ee6ff2bf3dfd34fbeeb}{Callback\+Conexion\+Terminada}} = void(uint16\+\_\+t conn\+Handle, uint8\+\_\+t reason)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_emisora_b_l_e_a0a00423c1458d93ff7865c0d508459ad}{Emisora\+BLE}} (const char \texorpdfstring{$\ast$}{*}nombre\+Emisora\+\_\+, const uint16\+\_\+t fabricante\+ID\+\_\+, const int8\+\_\+t tx\+Power\+\_\+)
+\item 
+void \mbox{\hyperlink{class_emisora_b_l_e_adbefd34b570bc58380da42e77527c3ce}{encender\+Emisora}} ()
+\item 
+void \mbox{\hyperlink{class_emisora_b_l_e_a881902d925f327ec142009de7e10355e}{encender\+Emisora}} (\mbox{\hyperlink{class_emisora_b_l_e_a2b5da98f1f7994b60de9349adc46538d}{Callback\+Conexion\+Establecida}} cbce, \mbox{\hyperlink{class_emisora_b_l_e_a2677eaf92c789ee6ff2bf3dfd34fbeeb}{Callback\+Conexion\+Terminada}} cbct)
+\item 
+void \mbox{\hyperlink{class_emisora_b_l_e_ac46ff05d8af2388d14c8006daa8be97d}{detener\+Anuncio}} ()
+\item 
+bool \mbox{\hyperlink{class_emisora_b_l_e_aefb25aa471115728b45a7c096965ff76}{esta\+Anunciando}} ()
+\item 
+void \mbox{\hyperlink{class_emisora_b_l_e_ac79d557cecd4476d72bb519beb5f29c2}{emitir\+Anuncio\+IBeacon}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}beacon\+UUID, int16\+\_\+t major, int16\+\_\+t minor, uint8\+\_\+t rssi)
+\item 
+void \mbox{\hyperlink{class_emisora_b_l_e_a7a728aa8ab6975905cb67b918e4d12ca}{emitir\+Anuncio\+IBeacon\+Libre}} (const char \texorpdfstring{$\ast$}{*}carga, const uint8\+\_\+t tamanyo\+Carga)
+\item 
+bool \mbox{\hyperlink{class_emisora_b_l_e_a8536957b6a7ec181313367caaa317ed8}{anyadir\+Servicio}} (\mbox{\hyperlink{class_servicio_en_emisora}{Servicio\+En\+Emisora}} \&servicio)
+\item 
+bool \mbox{\hyperlink{class_emisora_b_l_e_a5474e5ad5fe4c71aa0018775785b62fb}{anyadir\+Servicio\+Con\+Sus\+Caracteristicas}} (\mbox{\hyperlink{class_servicio_en_emisora}{Servicio\+En\+Emisora}} \&servicio)
+\item 
+{\footnotesize template$<$typename ... T$>$ }\\bool \mbox{\hyperlink{class_emisora_b_l_e_a66e49a1f4418fe20804b16c7a35d1fb7}{anyadir\+Servicio\+Con\+Sus\+Caracteristicas}} (\mbox{\hyperlink{class_servicio_en_emisora}{Servicio\+En\+Emisora}} \&servicio, \mbox{\hyperlink{class_servicio_en_emisora_1_1_caracteristica}{Servicio\+En\+Emisora\+::\+Caracteristica}} \&caracteristica, T \&... resto\+Caracteristicas)
+\item 
+{\footnotesize template$<$typename ... T$>$ }\\bool \mbox{\hyperlink{class_emisora_b_l_e_a16895e037c0ef42462b9b324407fe448}{anyadir\+Servicio\+Con\+Sus\+Caracteristicas\+YActivar}} (\mbox{\hyperlink{class_servicio_en_emisora}{Servicio\+En\+Emisora}} \&servicio, T \&... resto\+Caracteristicas)
+\item 
+void \mbox{\hyperlink{class_emisora_b_l_e_aa31978c852802e08f6706f5108bd742c}{instalar\+Callback\+Conexion\+Establecida}} (\mbox{\hyperlink{class_emisora_b_l_e_a2b5da98f1f7994b60de9349adc46538d}{Callback\+Conexion\+Establecida}} cb)
+\item 
+void \mbox{\hyperlink{class_emisora_b_l_e_a4ca1aeede06f377c8026f3416a78221d}{instalar\+Callback\+Conexion\+Terminada}} (\mbox{\hyperlink{class_emisora_b_l_e_a2677eaf92c789ee6ff2bf3dfd34fbeeb}{Callback\+Conexion\+Terminada}} cb)
+\item 
+BLEConnection \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_emisora_b_l_e_a45f68bc05b6b5de37a6ea800d2cce9ef}{get\+Conexion}} (uint16\+\_\+t conn\+Handle)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_emisora_b_l_e_af05d4dedb0ffaf9ea8ae546595b8ec48}{nombre\+Emisora}}
+\item 
+const uint16\+\_\+t \mbox{\hyperlink{class_emisora_b_l_e_a541386cd9ac170f430b498c0e8292cdf}{fabricante\+ID}}
+\item 
+const int8\+\_\+t \mbox{\hyperlink{class_emisora_b_l_e_afc32aebe825cb8b63cfe43e8bfbaa2d5}{tx\+Power}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+
+
+Definición en la línea \mbox{\hyperlink{_emisora_b_l_e_8h_source_l00014}{14}} del archivo \mbox{\hyperlink{_emisora_b_l_e_8h_source}{Emisora\+BLE.\+h}}.
+
+
+
+\doxysubsection{Documentación de los «\+Typedef» miembros de la clase}
+\Hypertarget{class_emisora_b_l_e_a2b5da98f1f7994b60de9349adc46538d}\label{class_emisora_b_l_e_a2b5da98f1f7994b60de9349adc46538d} 
+\index{EmisoraBLE@{EmisoraBLE}!CallbackConexionEstablecida@{CallbackConexionEstablecida}}
+\index{CallbackConexionEstablecida@{CallbackConexionEstablecida}!EmisoraBLE@{EmisoraBLE}}
+\doxysubsubsection{\texorpdfstring{CallbackConexionEstablecida}{CallbackConexionEstablecida}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{class_emisora_b_l_e_a2b5da98f1f7994b60de9349adc46538d}{Callback\+Conexion\+Establecida}} =  void ( uint16\+\_\+t conn\+Handle )}
+
+
+
+Definición en la línea \mbox{\hyperlink{_emisora_b_l_e_8h_source_l00025}{25}} del archivo \mbox{\hyperlink{_emisora_b_l_e_8h_source}{Emisora\+BLE.\+h}}.
+
+\Hypertarget{class_emisora_b_l_e_a2677eaf92c789ee6ff2bf3dfd34fbeeb}\label{class_emisora_b_l_e_a2677eaf92c789ee6ff2bf3dfd34fbeeb} 
+\index{EmisoraBLE@{EmisoraBLE}!CallbackConexionTerminada@{CallbackConexionTerminada}}
+\index{CallbackConexionTerminada@{CallbackConexionTerminada}!EmisoraBLE@{EmisoraBLE}}
+\doxysubsubsection{\texorpdfstring{CallbackConexionTerminada}{CallbackConexionTerminada}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{class_emisora_b_l_e_a2677eaf92c789ee6ff2bf3dfd34fbeeb}{Callback\+Conexion\+Terminada}} =  void ( uint16\+\_\+t conn\+Handle, uint8\+\_\+t reason)}
+
+
+
+Definición en la línea \mbox{\hyperlink{_emisora_b_l_e_8h_source_l00026}{26}} del archivo \mbox{\hyperlink{_emisora_b_l_e_8h_source}{Emisora\+BLE.\+h}}.
+
+
+
+\doxysubsection{Documentación de constructores y destructores}
+\Hypertarget{class_emisora_b_l_e_a0a00423c1458d93ff7865c0d508459ad}\label{class_emisora_b_l_e_a0a00423c1458d93ff7865c0d508459ad} 
+\index{EmisoraBLE@{EmisoraBLE}!EmisoraBLE@{EmisoraBLE}}
+\index{EmisoraBLE@{EmisoraBLE}!EmisoraBLE@{EmisoraBLE}}
+\doxysubsubsection{\texorpdfstring{EmisoraBLE()}{EmisoraBLE()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_emisora_b_l_e}{Emisora\+BLE}} (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{nombre\+Emisora\+\_\+,  }\item[{const uint16\+\_\+t}]{fabricante\+ID\+\_\+,  }\item[{const int8\+\_\+t}]{tx\+Power\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_emisora_b_l_e_8h_source_l00030}{30}} del archivo \mbox{\hyperlink{_emisora_b_l_e_8h_source}{Emisora\+BLE.\+h}}.
+
+
+
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{class_emisora_b_l_e_a8536957b6a7ec181313367caaa317ed8}\label{class_emisora_b_l_e_a8536957b6a7ec181313367caaa317ed8} 
+\index{EmisoraBLE@{EmisoraBLE}!anyadirServicio@{anyadirServicio}}
+\index{anyadirServicio@{anyadirServicio}!EmisoraBLE@{EmisoraBLE}}
+\doxysubsubsection{\texorpdfstring{anyadirServicio()}{anyadirServicio()}}
+{\footnotesize\ttfamily bool anyadir\+Servicio (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_servicio_en_emisora}{Servicio\+En\+Emisora}} \&}]{servicio }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_emisora_b_l_e_8h_source_l00231}{231}} del archivo \mbox{\hyperlink{_emisora_b_l_e_8h_source}{Emisora\+BLE.\+h}}.
+
+\Hypertarget{class_emisora_b_l_e_a5474e5ad5fe4c71aa0018775785b62fb}\label{class_emisora_b_l_e_a5474e5ad5fe4c71aa0018775785b62fb} 
+\index{EmisoraBLE@{EmisoraBLE}!anyadirServicioConSusCaracteristicas@{anyadirServicioConSusCaracteristicas}}
+\index{anyadirServicioConSusCaracteristicas@{anyadirServicioConSusCaracteristicas}!EmisoraBLE@{EmisoraBLE}}
+\doxysubsubsection{\texorpdfstring{anyadirServicioConSusCaracteristicas()}{anyadirServicioConSusCaracteristicas()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool anyadir\+Servicio\+Con\+Sus\+Caracteristicas (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_servicio_en_emisora}{Servicio\+En\+Emisora}} \&}]{servicio }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_emisora_b_l_e_8h_source_l00252}{252}} del archivo \mbox{\hyperlink{_emisora_b_l_e_8h_source}{Emisora\+BLE.\+h}}.
+
+\Hypertarget{class_emisora_b_l_e_a66e49a1f4418fe20804b16c7a35d1fb7}\label{class_emisora_b_l_e_a66e49a1f4418fe20804b16c7a35d1fb7} 
+\index{EmisoraBLE@{EmisoraBLE}!anyadirServicioConSusCaracteristicas@{anyadirServicioConSusCaracteristicas}}
+\index{anyadirServicioConSusCaracteristicas@{anyadirServicioConSusCaracteristicas}!EmisoraBLE@{EmisoraBLE}}
+\doxysubsubsection{\texorpdfstring{anyadirServicioConSusCaracteristicas()}{anyadirServicioConSusCaracteristicas()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename ... T$>$ \\
+bool anyadir\+Servicio\+Con\+Sus\+Caracteristicas (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_servicio_en_emisora}{Servicio\+En\+Emisora}} \&}]{servicio,  }\item[{\mbox{\hyperlink{class_servicio_en_emisora_1_1_caracteristica}{Servicio\+En\+Emisora\+::\+Caracteristica}} \&}]{caracteristica,  }\item[{T \&...}]{resto\+Caracteristicas }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_emisora_b_l_e_8h_source_l00258}{258}} del archivo \mbox{\hyperlink{_emisora_b_l_e_8h_source}{Emisora\+BLE.\+h}}.
+
+\Hypertarget{class_emisora_b_l_e_a16895e037c0ef42462b9b324407fe448}\label{class_emisora_b_l_e_a16895e037c0ef42462b9b324407fe448} 
+\index{EmisoraBLE@{EmisoraBLE}!anyadirServicioConSusCaracteristicasYActivar@{anyadirServicioConSusCaracteristicasYActivar}}
+\index{anyadirServicioConSusCaracteristicasYActivar@{anyadirServicioConSusCaracteristicasYActivar}!EmisoraBLE@{EmisoraBLE}}
+\doxysubsubsection{\texorpdfstring{anyadirServicioConSusCaracteristicasYActivar()}{anyadirServicioConSusCaracteristicasYActivar()}}
+{\footnotesize\ttfamily template$<$typename ... T$>$ \\
+bool anyadir\+Servicio\+Con\+Sus\+Caracteristicas\+YActivar (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_servicio_en_emisora}{Servicio\+En\+Emisora}} \&}]{servicio,  }\item[{T \&...}]{resto\+Caracteristicas }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_emisora_b_l_e_8h_source_l00270}{270}} del archivo \mbox{\hyperlink{_emisora_b_l_e_8h_source}{Emisora\+BLE.\+h}}.
+
+\Hypertarget{class_emisora_b_l_e_ac46ff05d8af2388d14c8006daa8be97d}\label{class_emisora_b_l_e_ac46ff05d8af2388d14c8006daa8be97d} 
+\index{EmisoraBLE@{EmisoraBLE}!detenerAnuncio@{detenerAnuncio}}
+\index{detenerAnuncio@{detenerAnuncio}!EmisoraBLE@{EmisoraBLE}}
+\doxysubsubsection{\texorpdfstring{detenerAnuncio()}{detenerAnuncio()}}
+{\footnotesize\ttfamily void detener\+Anuncio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_emisora_b_l_e_8h_source_l00076}{76}} del archivo \mbox{\hyperlink{_emisora_b_l_e_8h_source}{Emisora\+BLE.\+h}}.
+
+\Hypertarget{class_emisora_b_l_e_ac79d557cecd4476d72bb519beb5f29c2}\label{class_emisora_b_l_e_ac79d557cecd4476d72bb519beb5f29c2} 
+\index{EmisoraBLE@{EmisoraBLE}!emitirAnuncioIBeacon@{emitirAnuncioIBeacon}}
+\index{emitirAnuncioIBeacon@{emitirAnuncioIBeacon}!EmisoraBLE@{EmisoraBLE}}
+\doxysubsubsection{\texorpdfstring{emitirAnuncioIBeacon()}{emitirAnuncioIBeacon()}}
+{\footnotesize\ttfamily void emitir\+Anuncio\+IBeacon (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{beacon\+UUID,  }\item[{int16\+\_\+t}]{major,  }\item[{int16\+\_\+t}]{minor,  }\item[{uint8\+\_\+t}]{rssi }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_emisora_b_l_e_8h_source_l00096}{96}} del archivo \mbox{\hyperlink{_emisora_b_l_e_8h_source}{Emisora\+BLE.\+h}}.
+
+\Hypertarget{class_emisora_b_l_e_a7a728aa8ab6975905cb67b918e4d12ca}\label{class_emisora_b_l_e_a7a728aa8ab6975905cb67b918e4d12ca} 
+\index{EmisoraBLE@{EmisoraBLE}!emitirAnuncioIBeaconLibre@{emitirAnuncioIBeaconLibre}}
+\index{emitirAnuncioIBeaconLibre@{emitirAnuncioIBeaconLibre}!EmisoraBLE@{EmisoraBLE}}
+\doxysubsubsection{\texorpdfstring{emitirAnuncioIBeaconLibre()}{emitirAnuncioIBeaconLibre()}}
+{\footnotesize\ttfamily void emitir\+Anuncio\+IBeacon\+Libre (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{carga,  }\item[{const uint8\+\_\+t}]{tamanyo\+Carga }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_emisora_b_l_e_8h_source_l00172}{172}} del archivo \mbox{\hyperlink{_emisora_b_l_e_8h_source}{Emisora\+BLE.\+h}}.
+
+\Hypertarget{class_emisora_b_l_e_adbefd34b570bc58380da42e77527c3ce}\label{class_emisora_b_l_e_adbefd34b570bc58380da42e77527c3ce} 
+\index{EmisoraBLE@{EmisoraBLE}!encenderEmisora@{encenderEmisora}}
+\index{encenderEmisora@{encenderEmisora}!EmisoraBLE@{EmisoraBLE}}
+\doxysubsubsection{\texorpdfstring{encenderEmisora()}{encenderEmisora()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void encender\+Emisora (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_emisora_b_l_e_8h_source_l00050}{50}} del archivo \mbox{\hyperlink{_emisora_b_l_e_8h_source}{Emisora\+BLE.\+h}}.
+
+\Hypertarget{class_emisora_b_l_e_a881902d925f327ec142009de7e10355e}\label{class_emisora_b_l_e_a881902d925f327ec142009de7e10355e} 
+\index{EmisoraBLE@{EmisoraBLE}!encenderEmisora@{encenderEmisora}}
+\index{encenderEmisora@{encenderEmisora}!EmisoraBLE@{EmisoraBLE}}
+\doxysubsubsection{\texorpdfstring{encenderEmisora()}{encenderEmisora()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void encender\+Emisora (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_emisora_b_l_e_a2b5da98f1f7994b60de9349adc46538d}{Callback\+Conexion\+Establecida}}}]{cbce,  }\item[{\mbox{\hyperlink{class_emisora_b_l_e_a2677eaf92c789ee6ff2bf3dfd34fbeeb}{Callback\+Conexion\+Terminada}}}]{cbct }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_emisora_b_l_e_8h_source_l00062}{62}} del archivo \mbox{\hyperlink{_emisora_b_l_e_8h_source}{Emisora\+BLE.\+h}}.
+
+\Hypertarget{class_emisora_b_l_e_aefb25aa471115728b45a7c096965ff76}\label{class_emisora_b_l_e_aefb25aa471115728b45a7c096965ff76} 
+\index{EmisoraBLE@{EmisoraBLE}!estaAnunciando@{estaAnunciando}}
+\index{estaAnunciando@{estaAnunciando}!EmisoraBLE@{EmisoraBLE}}
+\doxysubsubsection{\texorpdfstring{estaAnunciando()}{estaAnunciando()}}
+{\footnotesize\ttfamily bool esta\+Anunciando (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_emisora_b_l_e_8h_source_l00088}{88}} del archivo \mbox{\hyperlink{_emisora_b_l_e_8h_source}{Emisora\+BLE.\+h}}.
+
+\Hypertarget{class_emisora_b_l_e_a45f68bc05b6b5de37a6ea800d2cce9ef}\label{class_emisora_b_l_e_a45f68bc05b6b5de37a6ea800d2cce9ef} 
+\index{EmisoraBLE@{EmisoraBLE}!getConexion@{getConexion}}
+\index{getConexion@{getConexion}!EmisoraBLE@{EmisoraBLE}}
+\doxysubsubsection{\texorpdfstring{getConexion()}{getConexion()}}
+{\footnotesize\ttfamily BLEConnection \texorpdfstring{$\ast$}{*} get\+Conexion (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{conn\+Handle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_emisora_b_l_e_8h_source_l00300}{300}} del archivo \mbox{\hyperlink{_emisora_b_l_e_8h_source}{Emisora\+BLE.\+h}}.
+
+\Hypertarget{class_emisora_b_l_e_aa31978c852802e08f6706f5108bd742c}\label{class_emisora_b_l_e_aa31978c852802e08f6706f5108bd742c} 
+\index{EmisoraBLE@{EmisoraBLE}!instalarCallbackConexionEstablecida@{instalarCallbackConexionEstablecida}}
+\index{instalarCallbackConexionEstablecida@{instalarCallbackConexionEstablecida}!EmisoraBLE@{EmisoraBLE}}
+\doxysubsubsection{\texorpdfstring{instalarCallbackConexionEstablecida()}{instalarCallbackConexionEstablecida()}}
+{\footnotesize\ttfamily void instalar\+Callback\+Conexion\+Establecida (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_emisora_b_l_e_a2b5da98f1f7994b60de9349adc46538d}{Callback\+Conexion\+Establecida}}}]{cb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_emisora_b_l_e_8h_source_l00286}{286}} del archivo \mbox{\hyperlink{_emisora_b_l_e_8h_source}{Emisora\+BLE.\+h}}.
+
+\Hypertarget{class_emisora_b_l_e_a4ca1aeede06f377c8026f3416a78221d}\label{class_emisora_b_l_e_a4ca1aeede06f377c8026f3416a78221d} 
+\index{EmisoraBLE@{EmisoraBLE}!instalarCallbackConexionTerminada@{instalarCallbackConexionTerminada}}
+\index{instalarCallbackConexionTerminada@{instalarCallbackConexionTerminada}!EmisoraBLE@{EmisoraBLE}}
+\doxysubsubsection{\texorpdfstring{instalarCallbackConexionTerminada()}{instalarCallbackConexionTerminada()}}
+{\footnotesize\ttfamily void instalar\+Callback\+Conexion\+Terminada (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_emisora_b_l_e_a2677eaf92c789ee6ff2bf3dfd34fbeeb}{Callback\+Conexion\+Terminada}}}]{cb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_emisora_b_l_e_8h_source_l00294}{294}} del archivo \mbox{\hyperlink{_emisora_b_l_e_8h_source}{Emisora\+BLE.\+h}}.
+
+
+
+\doxysubsection{Documentación de campos}
+\Hypertarget{class_emisora_b_l_e_a541386cd9ac170f430b498c0e8292cdf}\label{class_emisora_b_l_e_a541386cd9ac170f430b498c0e8292cdf} 
+\index{EmisoraBLE@{EmisoraBLE}!fabricanteID@{fabricanteID}}
+\index{fabricanteID@{fabricanteID}!EmisoraBLE@{EmisoraBLE}}
+\doxysubsubsection{\texorpdfstring{fabricanteID}{fabricanteID}}
+{\footnotesize\ttfamily const uint16\+\_\+t fabricante\+ID\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_emisora_b_l_e_8h_source_l00018}{18}} del archivo \mbox{\hyperlink{_emisora_b_l_e_8h_source}{Emisora\+BLE.\+h}}.
+
+\Hypertarget{class_emisora_b_l_e_af05d4dedb0ffaf9ea8ae546595b8ec48}\label{class_emisora_b_l_e_af05d4dedb0ffaf9ea8ae546595b8ec48} 
+\index{EmisoraBLE@{EmisoraBLE}!nombreEmisora@{nombreEmisora}}
+\index{nombreEmisora@{nombreEmisora}!EmisoraBLE@{EmisoraBLE}}
+\doxysubsubsection{\texorpdfstring{nombreEmisora}{nombreEmisora}}
+{\footnotesize\ttfamily const char\texorpdfstring{$\ast$}{*} nombre\+Emisora\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_emisora_b_l_e_8h_source_l00017}{17}} del archivo \mbox{\hyperlink{_emisora_b_l_e_8h_source}{Emisora\+BLE.\+h}}.
+
+\Hypertarget{class_emisora_b_l_e_afc32aebe825cb8b63cfe43e8bfbaa2d5}\label{class_emisora_b_l_e_afc32aebe825cb8b63cfe43e8bfbaa2d5} 
+\index{EmisoraBLE@{EmisoraBLE}!txPower@{txPower}}
+\index{txPower@{txPower}!EmisoraBLE@{EmisoraBLE}}
+\doxysubsubsection{\texorpdfstring{txPower}{txPower}}
+{\footnotesize\ttfamily const int8\+\_\+t tx\+Power\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_emisora_b_l_e_8h_source_l00019}{19}} del archivo \mbox{\hyperlink{_emisora_b_l_e_8h_source}{Emisora\+BLE.\+h}}.
+
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/clavi/\+Desktop/\+UPV Gandia/\+UPV Gandia 2023-\/2024/\+Proyecto Biometria/\+Sprint 0 -\/ Individual/\+Arduino/src/\+Sprint0\+\_\+\+Arduino/\mbox{\hyperlink{_emisora_b_l_e_8h}{Emisora\+BLE.\+h}}\end{DoxyCompactItemize}

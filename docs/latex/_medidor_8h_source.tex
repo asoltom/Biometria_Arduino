@@ -1,0 +1,59 @@
+\doxysection{Medidor.\+h}
+\hypertarget{_medidor_8h_source}{}\label{_medidor_8h_source}\index{C:/Users/clavi/Desktop/UPV Gandia/UPV Gandia 2023-\/2024/Proyecto Biometria/Sprint 0 -\/ Individual/Arduino/src/Sprint0\_Arduino/Medidor.h@{C:/Users/clavi/Desktop/UPV Gandia/UPV Gandia 2023-\/2024/Proyecto Biometria/Sprint 0 -\/ Individual/Arduino/src/Sprint0\_Arduino/Medidor.h}}
+\mbox{\hyperlink{_medidor_8h}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00001}00001\ \textcolor{comment}{//\ -\/*-\/\ mode:\ c++\ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00003}00003\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00004}00004\ \textcolor{comment}{//\ Arnau\ Soler\ Tomás}}
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00005}00005\ \textcolor{comment}{//\ 2023-\/09-\/25}}
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00006}00006\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00008}00008\ \textcolor{preprocessor}{\#ifndef\ MEDIDOR\_H\_INCLUIDO}}
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00009}00009\ \textcolor{preprocessor}{\#define\ MEDIDOR\_H\_INCLUIDO}}
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00011}00011\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00012}00012\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00013}\mbox{\hyperlink{class_medidor}{00013}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_medidor}{Medidor}}\ \{}
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00015}00015\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00016}00016\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00017}00017\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00019}00019\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00021}00021\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00022}00022\ \ \ \ \ \textcolor{comment}{//\ constructor}}
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00023}00023\ \ \ \ \ \textcolor{comment}{//\ Descripción:\ Constructor\ vacio}}
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00024}00024\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00025}\mbox{\hyperlink{class_medidor_a14d3aba1af2fbefe21a5732588b82a6a}{00025}}\ \ \ \ \ \mbox{\hyperlink{class_medidor_a14d3aba1af2fbefe21a5732588b82a6a}{Medidor}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00026}00026\ \ \ \ \ \}\ \textcolor{comment}{//\ ()}}
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00028}00028\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00029}00029\ \ \ \ \ \textcolor{comment}{//\ -\/-\/>\ iniciarMedidor()}}
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00030}00030\ \ \ \ \ \textcolor{comment}{//\ Descripción:\ esta\ función\ servirá\ para\ iniciar\ el\ Medidor}}
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00031}00031\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00032}\mbox{\hyperlink{class_medidor_affc9e121f2fcb157b1cf53080fd4d8d0}{00032}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_medidor_affc9e121f2fcb157b1cf53080fd4d8d0}{iniciarMedidor}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00033}00033\ \ \ \ \ \ \ \textcolor{comment}{//\ las\ cosas\ que\ no\ se\ puedan\ hacer\ en\ el\ constructor,\ if\ any}}
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00034}00034\ \ \ \ \ \}\ \textcolor{comment}{//\ ()}}
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00036}00036\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00037}00037\ \ \ \ \ \textcolor{comment}{//\ -\/-\/>\ medirCO2()\ -\/-\/>\ medidaCO2:N}}
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00038}00038\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00039}\mbox{\hyperlink{class_medidor_a2d6e9ecd95ca4a71fbee6337b9e7b455}{00039}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_medidor_a2d6e9ecd95ca4a71fbee6337b9e7b455}{medirCO2}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00040}00040\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 235;}
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00041}00041\ \ \ \ \ \}\ \textcolor{comment}{//\ ()}}
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00043}00043\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00044}00044\ \ \ \ \ \textcolor{comment}{//\ -\/-\/>\ medirTemperatura()\ -\/-\/>\ temp}}
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00045}00045\ \ \ \ \ \textcolor{comment}{//\ Descripción:\ En\ futuros\ Sprints,\ esta\ función\ devolverá\ la\ temperatura}}
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00046}00046\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00047}\mbox{\hyperlink{class_medidor_a9eebfb02db5e6b769bb035dd11fa6b5f}{00047}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_medidor_a9eebfb02db5e6b769bb035dd11fa6b5f}{medirTemperatura}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00048}00048\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/12;\ \textcolor{comment}{//\ qué\ frío\ !}}
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00049}00049\ \ \ \ \ \}\ \textcolor{comment}{//\ ()}}
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00051}00051\ \};\ \textcolor{comment}{//\ class}}
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{_medidor_8h_source_l00053}00053\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -60,6 +60,32 @@ class Publicador {
     } // ()
 
 // -------------------------------------------------------------------------------------------------------------
+// valorCO2:N, valorTemperatura:N, tiempoEspera:long --> publicarMisValores()
+// Descripción: Emite un anuncio con un determinado valor de CO2, un determinado valor de Temperatura y,
+// tras un tiempo determinado, detenemos el anuncio
+// -------------------------------------------------------------------------------------------------------------
+    void publicarMisValores( int16_t valorCO2, int16_t valorTemperatura, long tiempoEspera ) {
+
+      //
+      // 1. empezamos anuncio
+      //
+      
+      (*this).laEmisora.emitirAnuncioIBeacon( (*this).beaconUUID,
+                                              valorCO2, // major
+                                              valorTemperatura, // minor
+                                              (*this).RSSI // rssi
+                                            );
+      //
+      // 2. esperamos el tiempo que nos digan
+      //
+      esperar( tiempoEspera );
+
+      //
+      // 3. paramos anuncio
+      //
+      (*this).laEmisora.detenerAnuncio();
+    } // ()
+// -------------------------------------------------------------------------------------------------------------
 // valorCO2:N, contador:N, tiempoEspera:long --> publicarCO2()
 // Descripción: Emite un anuncio con un determinado valor de CO2, un contador y, tras un tiempo determinado,
 // detenemos el anuncio
@@ -69,6 +95,13 @@ class Publicador {
       //
       // 1. empezamos anuncio
       //
+
+      /*
+      ------- Explicación de los simbolos usados al calcular el 'major' -------
+      En major guardamos el valor de C02 de la enumeración MedicionesID en bytes.
+      A este, lo trasladamos 8 posiciones hacia la izquierda.
+      Finalmente, le sumamos el contador
+      */
       uint16_t major = (MedicionesID::CO2 << 8) + contador;
       (*this).laEmisora.emitirAnuncioIBeacon( (*this).beaconUUID,
                                               major, // major

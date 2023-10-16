@@ -1,0 +1,312 @@
+\doxysection{Emisora\+BLE.\+h}
+\hypertarget{_emisora_b_l_e_8h_source}{}\label{_emisora_b_l_e_8h_source}\index{C:/Users/clavi/Desktop/UPV Gandia/UPV Gandia 2023-\/2024/Proyecto Biometria/Sprint 0 -\/ Individual/Arduino/src/Sprint0\_Arduino/EmisoraBLE.h@{C:/Users/clavi/Desktop/UPV Gandia/UPV Gandia 2023-\/2024/Proyecto Biometria/Sprint 0 -\/ Individual/Arduino/src/Sprint0\_Arduino/EmisoraBLE.h}}
+\mbox{\hyperlink{_emisora_b_l_e_8h}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00001}00001\ \textcolor{comment}{//\ -\/*-\/\ mode:\ c++\ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00003}00003\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00004}00004\ \textcolor{comment}{//\ Arnau\ Soler\ Tomás}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00005}00005\ \textcolor{comment}{//\ 2023-\/09-\/25}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00006}00006\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00007}00007\ \textcolor{preprocessor}{\#ifndef\ EMISORA\_H\_INCLUIDO}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00008}00008\ \textcolor{preprocessor}{\#define\ EMISORA\_H\_INCLUIDO}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_servicio_en_emisora_8h}{ServicioEnEmisora.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00012}00012\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00013}00013\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00014}\mbox{\hyperlink{class_emisora_b_l_e}{00014}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_emisora_b_l_e}{EmisoraBLE}}\ \{}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00015}00015\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00017}\mbox{\hyperlink{class_emisora_b_l_e_af05d4dedb0ffaf9ea8ae546595b8ec48}{00017}}\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ \mbox{\hyperlink{class_emisora_b_l_e_af05d4dedb0ffaf9ea8ae546595b8ec48}{nombreEmisora}};}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00018}\mbox{\hyperlink{class_emisora_b_l_e_a541386cd9ac170f430b498c0e8292cdf}{00018}}\ \ \ \ \ \textcolor{keyword}{const}\ uint16\_t\ \mbox{\hyperlink{class_emisora_b_l_e_a541386cd9ac170f430b498c0e8292cdf}{fabricanteID}};}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00019}\mbox{\hyperlink{class_emisora_b_l_e_afc32aebe825cb8b63cfe43e8bfbaa2d5}{00019}}\ \ \ \ \ \textcolor{keyword}{const}\ int8\_t\ \mbox{\hyperlink{class_emisora_b_l_e_afc32aebe825cb8b63cfe43e8bfbaa2d5}{txPower}};}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00021}00021\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00023}00023\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00024}00024\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00025}\mbox{\hyperlink{class_emisora_b_l_e_a2b5da98f1f7994b60de9349adc46538d}{00025}}\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{class_emisora_b_l_e_a2b5da98f1f7994b60de9349adc46538d}{CallbackConexionEstablecida}}\ =\ void\ (\ uint16\_t\ connHandle\ );}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00026}\mbox{\hyperlink{class_emisora_b_l_e_a2677eaf92c789ee6ff2bf3dfd34fbeeb}{00026}}\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{class_emisora_b_l_e_a2677eaf92c789ee6ff2bf3dfd34fbeeb}{CallbackConexionTerminada}}\ =\ void\ (\ uint16\_t\ connHandle,\ uint8\_t\ reason);}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00028}00028\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00029}00029\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00030}\mbox{\hyperlink{class_emisora_b_l_e_a0a00423c1458d93ff7865c0d508459ad}{00030}}\ \ \ \ \ \mbox{\hyperlink{class_emisora_b_l_e_a0a00423c1458d93ff7865c0d508459ad}{EmisoraBLE}}(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ nombreEmisora\_,\ \textcolor{keyword}{const}\ uint16\_t\ fabricanteID\_,}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ int8\_t\ txPower\_\ )}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00032}00032\ \ \ \ \ \ \ :}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00033}00033\ \ \ \ \ \ \ \mbox{\hyperlink{class_emisora_b_l_e_af05d4dedb0ffaf9ea8ae546595b8ec48}{nombreEmisora}}(\ nombreEmisora\_\ )\ ,}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00034}00034\ \ \ \ \ \ \ \mbox{\hyperlink{class_emisora_b_l_e_a541386cd9ac170f430b498c0e8292cdf}{fabricanteID}}(\ fabricanteID\_\ )\ ,}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00035}00035\ \ \ \ \ \ \ \mbox{\hyperlink{class_emisora_b_l_e_afc32aebe825cb8b63cfe43e8bfbaa2d5}{txPower}}(\ txPower\_\ )}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00036}00036\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00037}00037\ \ \ \ \ \ \ \textcolor{comment}{//\ no\ encender\ ahora\ la\ emisora,\ tal\ vez\ sea\ por\ el\ println()}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00038}00038\ \ \ \ \ \ \ \textcolor{comment}{//\ que\ hace\ que\ todo\ falle\ si\ lo\ llamo\ en\ el\ contructor}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00039}00039\ \ \ \ \ \ \ \textcolor{comment}{//\ (\ =\ antes\ que\ configuremos\ Serial\ )}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00040}00040\ \ \ \ \ \ \ \textcolor{comment}{//\ No\ parece\ que\ sea\ por\ el\ println,}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00041}00041\ \ \ \ \ \ \ \textcolor{comment}{//\ por\ tanto\ NO\_encenderEmisora();}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00042}00042\ \ \ \ \ \}\ \textcolor{comment}{//\ ()}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00043}00043\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00044}00044\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00045}00045\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00046}00046\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00047}00047\ \ \ \ \ \textcolor{comment}{//\ encenderEmisora()}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00048}00048\ \ \ \ \ \textcolor{comment}{//\ Descripción:\ Método\ para\ encender\ la\ Emisora}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00049}00049\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00050}\mbox{\hyperlink{class_emisora_b_l_e_adbefd34b570bc58380da42e77527c3ce}{00050}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_emisora_b_l_e_adbefd34b570bc58380da42e77527c3ce}{encenderEmisora}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00051}00051\ \ \ \ \ \ \ \textcolor{comment}{//\ Serial.println\ (\ "{}Bluefruit.begin()\ "{}\ );}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00052}00052\ \ \ \ \ \ \ Bluefruit.begin();}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00054}00054\ \ \ \ \ \ \ \textcolor{comment}{//\ por\ si\ acaso:}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00055}00055\ \ \ \ \ \ \ (*this).detenerAnuncio();}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00056}00056\ \ \ \ \ \}\ \textcolor{comment}{//\ ()}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00058}00058\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00059}00059\ \ \ \ \ \textcolor{comment}{//\ cbce:cb,\ cbct:cb\ -\/-\/>\ encenderEmisora()}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00060}00060\ \ \ \ \ \textcolor{comment}{//\ Descripción:\ Método\ para\ encender\ la\ Emisora\ mediante\ callbacks}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00061}00061\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00062}\mbox{\hyperlink{class_emisora_b_l_e_a881902d925f327ec142009de7e10355e}{00062}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_emisora_b_l_e_a881902d925f327ec142009de7e10355e}{encenderEmisora}}(\ \mbox{\hyperlink{class_emisora_b_l_e_a2b5da98f1f7994b60de9349adc46538d}{CallbackConexionEstablecida}}\ cbce,}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_emisora_b_l_e_a2677eaf92c789ee6ff2bf3dfd34fbeeb}{CallbackConexionTerminada}}\ cbct\ )\ \{}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00065}00065\ \ \ \ \ \ \ \mbox{\hyperlink{class_emisora_b_l_e_adbefd34b570bc58380da42e77527c3ce}{encenderEmisora}}();}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00067}00067\ \ \ \ \ \ \ \mbox{\hyperlink{class_emisora_b_l_e_aa31978c852802e08f6706f5108bd742c}{instalarCallbackConexionEstablecida}}(\ cbce\ );}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00068}00068\ \ \ \ \ \ \ \mbox{\hyperlink{class_emisora_b_l_e_a4ca1aeede06f377c8026f3416a78221d}{instalarCallbackConexionTerminada}}(\ cbct\ );}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00070}00070\ \ \ \ \ \}\ \textcolor{comment}{//\ ()}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00072}00072\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00073}00073\ \ \ \ \ \textcolor{comment}{//\ detenerAnuncio()}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00074}00074\ \ \ \ \ \textcolor{comment}{//\ Descripción:Método\ para\ deter\ un\ Anuncio}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00075}00075\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00076}\mbox{\hyperlink{class_emisora_b_l_e_ac46ff05d8af2388d14c8006daa8be97d}{00076}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_emisora_b_l_e_ac46ff05d8af2388d14c8006daa8be97d}{detenerAnuncio}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00078}00078\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\ (*this).estaAnunciando()\ )\ \{}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00079}00079\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Serial.println\ (\ "{}Bluefruit.Advertising.stop()\ "{}\ );}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00080}00080\ \ \ \ \ \ \ \ \ Bluefruit.Advertising.stop();}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00081}00081\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00083}00083\ \ \ \ \ \}\ \ \textcolor{comment}{//\ ()}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00085}00085\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00086}00086\ \ \ \ \ \textcolor{comment}{//\ estaAnunciando()\ -\/>\ Boleano}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00087}00087\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00088}\mbox{\hyperlink{class_emisora_b_l_e_aefb25aa471115728b45a7c096965ff76}{00088}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_emisora_b_l_e_aefb25aa471115728b45a7c096965ff76}{estaAnunciando}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00089}00089\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Bluefruit.Advertising.isRunning();}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00090}00090\ \ \ \ \ \}\ \textcolor{comment}{//\ ()}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00092}00092\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00093}00093\ \ \ \ \ \textcolor{comment}{//\ beaconUUID:Txt,\ major:N,\ minor:N,\ rssi:Txt\ -\/-\/>\ emitirAnuncioIBeacon()}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00094}00094\ \ \ \ \ \textcolor{comment}{//\ Descripción:\ Método\ para\ emitir\ un\ anuncio\ de\ tipo\ iBeacon\ con\ sus\ respectivos\ parámetros}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00095}00095\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00096}\mbox{\hyperlink{class_emisora_b_l_e_ac79d557cecd4476d72bb519beb5f29c2}{00096}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_emisora_b_l_e_ac79d557cecd4476d72bb519beb5f29c2}{emitirAnuncioIBeacon}}(\ uint8\_t\ *\ beaconUUID,\ int16\_t\ major,\ int16\_t\ minor,\ uint8\_t\ rssi\ )\ \{}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00098}00098\ \ \ \ \ \ \ (*this).detenerAnuncio();}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00100}00100\ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00101}00101\ \ \ \ \ \ \ \textcolor{comment}{//\ creo\ el\ beacon}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00102}00102\ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00103}00103\ \ \ \ \ \ \ BLEBeacon\ elBeacon(\ beaconUUID,\ major,\ minor,\ rssi\ );}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00104}00104\ \ \ \ \ \ \ elBeacon.setManufacturer(\ (*this).fabricanteID\ );}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00105}00105\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00106}00106\ \ \ \ \ \ \ Bluefruit.setTxPower(\ (*this).txPower\ );}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00107}00107\ \ \ \ \ \ \ Bluefruit.setName(\ (*this).nombreEmisora\ );}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00108}00108\ \ \ \ \ \ \ Bluefruit.ScanResponse.addName();\ \textcolor{comment}{//\ para\ que\ envíe\ el\ nombre\ de\ emisora\ (?!)}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00110}00110\ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00111}00111\ \ \ \ \ \ \ \textcolor{comment}{//\ pongo\ el\ beacon}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00112}00112\ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00113}00113\ \ \ \ \ \ \ Bluefruit.Advertising.setBeacon(\ elBeacon\ );}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00114}00114\ \ \ \ \ \ \ Bluefruit.Advertising.restartOnDisconnect(\textcolor{keyword}{true});\ \textcolor{comment}{//\ no\ hace\ falta,\ pero\ lo\ pongo}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00115}00115\ \ \ \ \ \ \ Bluefruit.Advertising.setInterval(100,\ 100);\ \ \ \ \textcolor{comment}{//\ in\ unit\ of\ 0.625\ ms}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00117}00117\ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00118}00118\ \ \ \ \ \ \ \textcolor{comment}{//\ empieza\ el\ anuncio,\ 0\ =\ tiempo\ indefinido}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00119}00119\ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00120}00120\ \ \ \ \ \ \ Bluefruit.Advertising.start(\ 0\ );}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00121}00121\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00122}00122\ \ \ \ \ \}\ \textcolor{comment}{//\ ()}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00123}00123\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00124}00124\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00125}00125\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00126}00126\ \ \ \ \ \textcolor{comment}{//\ Ejemplo\ de\ Beacon\ (31\ bytes)}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00127}00127\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00128}00128\ \ \ \ \ \textcolor{comment}{//\ https://os.mbed.com/blog/entry/BLE-\/Beacons-\/URIBeacon-\/AltBeacons-\/iBeacon/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00129}00129\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00130}00130\ \ \ \ \ \textcolor{comment}{//\ The\ iBeacon\ Prefix\ contains\ the\ hex\ data\ :\ 0x0201061AFF004C0215.\ This\ breaks\ down\ as\ follows:}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00131}00131\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00132}00132\ \ \ \ \ \textcolor{comment}{//\ 0x020106\ defines\ the\ advertising\ packet\ as\ BLE\ General\ Discoverable\ and\ BR/EDR\ high-\/speed\ incompatible.}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00133}00133\ \ \ \ \ \textcolor{comment}{//\ Effectively\ it\ says\ this\ is\ only\ broadcasting,\ not\ connecting.}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00134}00134\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00135}00135\ \ \ \ \ \textcolor{comment}{//\ 0x1AFF\ says\ the\ following\ data\ is\ 26\ bytes\ long\ and\ is\ Manufacturer\ Specific\ Data.}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00136}00136\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00137}00137\ \ \ \ \ \textcolor{comment}{//\ 0x004C\ is\ Apple’s\ Bluetooth\ Sig\ ID\ and\ is\ the\ part\ of\ this\ spec\ that\ makes\ it\ Apple-\/dependent.}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00138}00138\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00139}00139\ \ \ \ \ \textcolor{comment}{//\ 0x02\ is\ a\ secondary\ ID\ that\ denotes\ a\ proximity\ beacon,\ which\ is\ used\ by\ all\ iBeacons.}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00140}00140\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00141}00141\ \ \ \ \ \textcolor{comment}{//\ 0x15\ defines\ the\ remaining\ length\ to\ be\ 21\ bytes\ (16+2+2+1).}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00142}00142\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00143}00143\ \ \ \ \ \textcolor{comment}{//\ Por\ ejemmplo:}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00144}00144\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00145}00145\ \ \ \ \ \textcolor{comment}{//\ 1.\ prefijo:\ 9bytes}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00146}00146\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ 0x02,\ 0x01,\ 0x06,\ \ \ \ \ \ \ //\ advFlags\ 3bytes}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00147}00147\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ 0x1a,\ 0xff,\ \ \ \ \ \ \ \ \ \ \ \ \ //\ advHeader\ 2\ (0x1a\ =\ 26\ =\ 25(lenght\ de\ 0x4c\ a\ 0xca)+1)\ \ \ 0xFF\ -\/>\ BLE\_GAP\_AD\_TYPE\_MANUFACTURER\_SPECIFIC\_DATA}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00148}00148\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ 0x4c,\ 0x00,\ \ \ \ \ \ \ \ \ \ \ \ \ //\ companyID\ 2bytes}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00149}00149\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ 0x02,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //\ ibeacon\ type\ 1\ byte}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00150}00150\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ 0x15,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //\ ibeacon\ length\ 1\ byte\ (dec=21\ lo\ que\ va\ a\ continuación:\ desde\ \ la\ 'f'\ hasta\ 0x01)}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00151}00151\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00152}00152\ \ \ \ \ \textcolor{comment}{//\ 2.\ uuid:\ 16bytes}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00153}00153\ \ \ \ \ \textcolor{comment}{//\ 'f',\ 'i',\ 's',\ 't',\ 'r',\ 'o',\ 'f',\ 'i',\ 's',\ 't',\ 'r',\ 'o',\ 0xa7,\ 0x10,\ 0x96,\ 0xe0}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00154}00154\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00155}00155\ \ \ \ \ \textcolor{comment}{//\ 2\ major:\ 2bytes}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00156}00156\ \ \ \ \ \textcolor{comment}{//\ 0x04,\ 0xd2,}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00157}00157\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00158}00158\ \ \ \ \ \textcolor{comment}{//\ minor:\ 2bytes}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00159}00159\ \ \ \ \ \textcolor{comment}{//\ 0x10,\ 0xe1,}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00160}00160\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00161}00161\ \ \ \ \ \textcolor{comment}{//\ 0xca,\ //\ tx\ power\ :\ 1bytes}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00162}00162\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00163}00163\ \ \ \ \ \textcolor{comment}{//\ 0x01,\ //\ este\ es\ el\ byte\ 31\ =\ BLE\_GAP\_ADV\_SET\_DATA\_SIZE\_MAX,\ parece\ que\ sobra}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00164}00164\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00165}00165\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00166}00166\ \ \ \ \ \textcolor{comment}{//\ Para\ enviar\ como\ carga\ libre\ los\ últimos\ 21\ bytes\ de\ un\ iBeacon}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00167}00167\ \ \ \ \ \textcolor{comment}{//\ (lo\ que\ normalmente\ sería\ uuid-\/16\ major-\/2\ minor-\/2\ txPower-\/1)}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00168}00168\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00169}00169\ \ \ \ \ \textcolor{comment}{//\ carga:char,\ tamanyoCarga:N\ -\/-\/>\ emitirAnuncioIBeaconLibre()}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00170}00170\ \ \ \ \ \textcolor{comment}{//\ Descripción:\ Método\ de\ la\ clase\ EmisoraBLE\ para\ enviar\ un\ texto}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00171}00171\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00172}\mbox{\hyperlink{class_emisora_b_l_e_a7a728aa8ab6975905cb67b918e4d12ca}{00172}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_emisora_b_l_e_a7a728aa8ab6975905cb67b918e4d12ca}{emitirAnuncioIBeaconLibre}}(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ carga,\ \textcolor{keyword}{const}\ uint8\_t\ tamanyoCarga\ )\ \{}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00173}00173\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00174}00174\ \ \ \ \ \ \ (*this).detenerAnuncio();}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00175}00175\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00176}00176\ \ \ \ \ \ \ Bluefruit.Advertising.clearData();}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00177}00177\ \ \ \ \ \ \ Bluefruit.ScanResponse.clearData();\ \textcolor{comment}{//\ hace\ falta?}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00178}00178\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00179}00179\ \ \ \ \ \ \ \textcolor{comment}{//\ Bluefruit.setTxPower(\ (*this).txPower\ );\ creo\ que\ no\ lo\ pongo\ porque\ es\ uno\ de\ los\ bytes\ de\ la\ parte\ de\ carga\ que\ utilizo}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00180}00180\ \ \ \ \ \ \ Bluefruit.setName(\ (*this).nombreEmisora\ );}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00181}00181\ \ \ \ \ \ \ Bluefruit.ScanResponse.addName();}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00182}00182\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00183}00183\ \ \ \ \ \ \ Bluefruit.Advertising.addFlags(BLE\_GAP\_ADV\_FLAGS\_LE\_ONLY\_GENERAL\_DISC\_MODE);}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00184}00184\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00185}00185\ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00186}00186\ \ \ \ \ \ \ \textcolor{comment}{//\ En\ principio,\ habrá\ puestos\ los\ 5\ primeros\ bytes}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00187}00187\ \ \ \ \ \ \ \textcolor{comment}{//\ Falta\ poner\ 4\ bytes\ fijos\ (company\ ID,\ beacon\ type,\ longitud)\ y\ 21\ de\ carga}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00188}00188\ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00189}00189\ \ \ \ \ \ \ uint8\_t\ restoPrefijoYCarga[4\ +\ 21]\ =\ \{}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00190}00190\ \ \ \ \ \ \ \ \ 0x4c,\ 0x00,\ \textcolor{comment}{//\ companyID\ 2}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00191}00191\ \ \ \ \ \ \ \ \ 0x02,\ \textcolor{comment}{//\ ibeacon\ type\ 1byte}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00192}00192\ \ \ \ \ \ \ \ \ 21,\ \textcolor{comment}{//\ ibeacon\ length\ 1byte\ (dec=21)\ \ longitud\ del\ resto\ //\ 0x15\ //\ ibeacon\ length\ 1byte\ (dec=21)\ \ longitud\ del\ resto}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00193}00193\ \ \ \ \ \ \ \ \ \textcolor{charliteral}{'-\/'},\ \textcolor{charliteral}{'-\/'},\ \textcolor{charliteral}{'-\/'},\ \textcolor{charliteral}{'-\/'},}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00194}00194\ \ \ \ \ \ \ \ \ \textcolor{charliteral}{'-\/'},\ \textcolor{charliteral}{'-\/'},\ \textcolor{charliteral}{'-\/'},\ \textcolor{charliteral}{'-\/'},}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00195}00195\ \ \ \ \ \ \ \ \ \textcolor{charliteral}{'-\/'},\ \textcolor{charliteral}{'-\/'},\ \textcolor{charliteral}{'-\/'},\ \textcolor{charliteral}{'-\/'},}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00196}00196\ \ \ \ \ \ \ \ \ \textcolor{charliteral}{'-\/'},\ \textcolor{charliteral}{'-\/'},\ \textcolor{charliteral}{'-\/'},\ \textcolor{charliteral}{'-\/'},}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00197}00197\ \ \ \ \ \ \ \ \ \textcolor{charliteral}{'-\/'},\ \textcolor{charliteral}{'-\/'},\ \textcolor{charliteral}{'-\/'},\ \textcolor{charliteral}{'-\/'},}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00198}00198\ \ \ \ \ \ \ \ \ \textcolor{charliteral}{'-\/'}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00199}00199\ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00200}00200\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00201}00201\ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00202}00202\ \ \ \ \ \ \ \textcolor{comment}{//\ addData()\ hay\ que\ usarlo\ sólo\ una\ vez.\ Por\ eso\ copio\ la\ carga}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00203}00203\ \ \ \ \ \ \ \textcolor{comment}{//\ en\ el\ anterior\ array,\ donde\ he\ dejado\ 21\ sitios\ libres}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00204}00204\ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00205}00205\ \ \ \ \ \ \ memcpy(\ \&restoPrefijoYCarga[4],\ \&carga[0],\ (\ tamanyoCarga\ >\ 21\ ?\ 21\ :\ tamanyoCarga\ )\ );}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00206}00206\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00207}00207\ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00208}00208\ \ \ \ \ \ \ \textcolor{comment}{//\ copio\ la\ carga\ para\ emitir}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00209}00209\ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00210}00210\ \ \ \ \ \ \ Bluefruit.Advertising.addData(\ BLE\_GAP\_AD\_TYPE\_MANUFACTURER\_SPECIFIC\_DATA,}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00211}00211\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&restoPrefijoYCarga[0],}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00212}00212\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 4\ +\ 21\ );}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00213}00213\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00214}00214\ \ \ \ \ \ \ Bluefruit.Advertising.restartOnDisconnect(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00215}00215\ \ \ \ \ \ \ Bluefruit.Advertising.setInterval(100,\ 100);\ \ \ \ \textcolor{comment}{//\ in\ unit\ of\ 0.625\ ms}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00216}00216\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00217}00217\ \ \ \ \ \ \ Bluefruit.Advertising.setFastTimeout(\ 1\ );\ \ \ \ \ \ \textcolor{comment}{//\ number\ of\ seconds\ in\ fast\ mode}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00218}00218\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00219}00219\ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00220}00220\ \ \ \ \ \ \ \textcolor{comment}{//\ empieza\ el\ anuncio,\ 0\ =\ tiempo\ indefinido}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00221}00221\ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00222}00222\ \ \ \ \ \ \ Bluefruit.Advertising.start(\ 0\ );}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00223}00223\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00224}00224\ \ \ \ \ \ \ \mbox{\hyperlink{namespace_globales_a8479052d558297793d6f1c8b11cf45d4}{Globales::elPuerto}}.\mbox{\hyperlink{class_puerto_serie_ae06c3c158490e837bb9b582967ccd88b}{escribir}}(\ \textcolor{stringliteral}{"{}emitiriBeacon\ libre\ \ Bluefruit.Advertising.start(\ 0\ );\ \ \(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00225}00225\ \ \ \ \ \}\ \textcolor{comment}{//\ ()}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00226}00226\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00227}00227\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00228}00228\ \textcolor{comment}{//\ servicio:ServicioEnEmisora\ -\/-\/>\ anyadirServicio()}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00229}00229\ \textcolor{comment}{//\ Descripción:\ Método\ para\ añadir\ un\ Servicio,\ en\ este\ caso\ de\ tipo\ ServicioEnEmisora}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00230}00230\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00231}\mbox{\hyperlink{class_emisora_b_l_e_a8536957b6a7ec181313367caaa317ed8}{00231}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_emisora_b_l_e_a8536957b6a7ec181313367caaa317ed8}{anyadirServicio}}(\ \mbox{\hyperlink{class_servicio_en_emisora}{ServicioEnEmisora}}\ \&\ servicio\ )\ \{}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00232}00232\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00233}00233\ \ \ \ \ \ \ \mbox{\hyperlink{namespace_globales_a8479052d558297793d6f1c8b11cf45d4}{Globales::elPuerto}}.\mbox{\hyperlink{class_puerto_serie_ae06c3c158490e837bb9b582967ccd88b}{escribir}}(\ \textcolor{stringliteral}{"{}\ Bluefruit.Advertising.addService(\ servicio\ );\ \(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00234}00234\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00235}00235\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ r\ =\ Bluefruit.Advertising.addService(\ servicio\ );}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00236}00236\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00237}00237\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\ !\ r\ )\ \{}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00238}00238\ \ \ \ \ \ \ \ \ Serial.println(\ \textcolor{stringliteral}{"{}\ SERVICION\ NO\ AÑADIDO\ \(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00239}00239\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00240}00240\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00241}00241\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00242}00242\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ r;}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00243}00243\ \ \ \ \ \ \ \textcolor{comment}{//\ nota:\ uso\ conversión\ de\ tipo\ de\ servicio\ (ServicioEnEmisora)\ a\ BLEService}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00244}00244\ \ \ \ \ \ \ \textcolor{comment}{//\ para\ addService()}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00245}00245\ \ \ \ \ \}\ \textcolor{comment}{//\ ()}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00246}00246\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00247}00247\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00248}00248\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00249}00249\ \textcolor{comment}{//\ servicio:ServicioEnEmisora\ -\/-\/>\ anyadirServicioConSusCaracteristicas()\ -\/-\/>\ boolean}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00250}00250\ \textcolor{comment}{//\ Descripción:\ Método\ que,\ actualmente,\ solo\ llama\ al\ método\ "{}anyadirServicio"{}\ para\ añadir\ un\ servicio}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00251}00251\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00252}\mbox{\hyperlink{class_emisora_b_l_e_a5474e5ad5fe4c71aa0018775785b62fb}{00252}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_emisora_b_l_e_a5474e5ad5fe4c71aa0018775785b62fb}{anyadirServicioConSusCaracteristicas}}(\ \mbox{\hyperlink{class_servicio_en_emisora}{ServicioEnEmisora}}\ \&\ servicio\ )\ \{}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00253}00253\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (*this).anyadirServicio(\ servicio\ );}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00254}00254\ \ \ \ \ \}\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00255}00255\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00256}00256\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00257}00257\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ ...\ T>}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00258}\mbox{\hyperlink{class_emisora_b_l_e_a66e49a1f4418fe20804b16c7a35d1fb7}{00258}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_emisora_b_l_e_a66e49a1f4418fe20804b16c7a35d1fb7}{anyadirServicioConSusCaracteristicas}}(\ \mbox{\hyperlink{class_servicio_en_emisora}{ServicioEnEmisora}}\ \&\ servicio,}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00259}00259\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_servicio_en_emisora_1_1_caracteristica}{ServicioEnEmisora::Caracteristica}}\ \&\ caracteristica,}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00260}00260\ \ \ \ \ \ \ \ \ T\&\ ...\ restoCaracteristicas)\ \{}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00261}00261\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00262}00262\ \ \ \ \ \ \ servicio.\mbox{\hyperlink{class_servicio_en_emisora_a1addea6271eae8c3f82dfa6271a5758a}{anyadirCaracteristica}}(\ caracteristica\ );}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00263}00263\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00264}00264\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_emisora_b_l_e_a5474e5ad5fe4c71aa0018775785b62fb}{anyadirServicioConSusCaracteristicas}}(\ servicio,\ restoCaracteristicas...\ );}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00265}00265\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00266}00266\ \ \ \ \ \}\ \textcolor{comment}{//\ ()}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00267}00267\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00268}00268\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00269}00269\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ ...\ T>}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00270}\mbox{\hyperlink{class_emisora_b_l_e_a16895e037c0ef42462b9b324407fe448}{00270}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_emisora_b_l_e_a16895e037c0ef42462b9b324407fe448}{anyadirServicioConSusCaracteristicasYActivar}}(\ \mbox{\hyperlink{class_servicio_en_emisora}{ServicioEnEmisora}}\ \&\ servicio,}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00271}00271\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ServicioEnEmisora::Caracteristica\ \&\ caracteristica,}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00272}00272\ \ \ \ \ \ \ \ \ T\&\ ...\ restoCaracteristicas)\ \{}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00273}00273\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00274}00274\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ r\ =\ \mbox{\hyperlink{class_emisora_b_l_e_a5474e5ad5fe4c71aa0018775785b62fb}{anyadirServicioConSusCaracteristicas}}(\ servicio,\ restoCaracteristicas...\ );}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00275}00275\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00276}00276\ \ \ \ \ \ \ servicio.\mbox{\hyperlink{class_servicio_en_emisora_a9ac5c412ee3fda94d6e2697a8838afe8}{activarServicio}}();}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00277}00277\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00278}00278\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ r;}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00279}00279\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00280}00280\ \ \ \ \ \}\ \textcolor{comment}{//\ ()}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00281}00281\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00282}00282\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00283}00283\ \textcolor{comment}{//\ cb:CallbackConexionEstablecida\ -\/-\/>\ instalarCallbackConexionEstablecida()}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00284}00284\ \textcolor{comment}{//\ Descripción:\ Método\ para\ instalar\ una\ Conexión\ mediante\ Callback}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00285}00285\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00286}\mbox{\hyperlink{class_emisora_b_l_e_aa31978c852802e08f6706f5108bd742c}{00286}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_emisora_b_l_e_aa31978c852802e08f6706f5108bd742c}{instalarCallbackConexionEstablecida}}(\ \mbox{\hyperlink{class_emisora_b_l_e_a2b5da98f1f7994b60de9349adc46538d}{CallbackConexionEstablecida}}\ cb\ )\ \{}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00287}00287\ \ \ \ \ \ \ Bluefruit.Periph.setConnectCallback(\ cb\ );}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00288}00288\ \ \ \ \ \}\ \textcolor{comment}{//\ ()}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00289}00289\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00290}00290\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00291}00291\ \textcolor{comment}{//\ cb:CallbackConexionTerminada\ -\/-\/>\ instalarCallbackConexionTerminada()}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00292}00292\ \textcolor{comment}{//\ Descripción:\ Método\ para\ terminar\ una\ Conexión\ mediante\ Callback}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00293}00293\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00294}\mbox{\hyperlink{class_emisora_b_l_e_a4ca1aeede06f377c8026f3416a78221d}{00294}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_emisora_b_l_e_a4ca1aeede06f377c8026f3416a78221d}{instalarCallbackConexionTerminada}}(\ \mbox{\hyperlink{class_emisora_b_l_e_a2677eaf92c789ee6ff2bf3dfd34fbeeb}{CallbackConexionTerminada}}\ cb\ )\ \{}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00295}00295\ \ \ \ \ \ \ Bluefruit.Periph.setDisconnectCallback(\ cb\ );}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00296}00296\ \ \ \ \ \}\ \textcolor{comment}{//\ ()}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00297}00297\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00298}00298\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00299}00299\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00300}\mbox{\hyperlink{class_emisora_b_l_e_a45f68bc05b6b5de37a6ea800d2cce9ef}{00300}}\ \ \ \ \ BLEConnection\ *\ \mbox{\hyperlink{class_emisora_b_l_e_a45f68bc05b6b5de37a6ea800d2cce9ef}{getConexion}}(\ uint16\_t\ connHandle\ )\ \{}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00301}00301\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Bluefruit.Connection(\ connHandle\ );}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00302}00302\ \ \ \ \ \}\ \textcolor{comment}{//\ ()}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00303}00303\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00304}00304\ \};\ \textcolor{comment}{//\ class}}
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00305}00305\ }
+\DoxyCodeLine{\Hypertarget{_emisora_b_l_e_8h_source_l00306}00306\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
